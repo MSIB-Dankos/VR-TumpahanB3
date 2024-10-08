@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(LineRenderer))]
 public class ShowPathLine : MonoBehaviour
 {
-    public Transform target;
+    [OnValueChanged("RefreshDrawPath")] public Transform target;
     public float offsetHeight = 0.5f;
     public float updateSpeed = 0.25f;
 
     private LineRenderer pathRenderer;
-    private NavMeshTriangulation navMeshTriangulation;
     private Coroutine currentDraw;
 
     private void Awake()
     {
-        navMeshTriangulation = NavMesh.CalculateTriangulation();
+        currentDraw = StartCoroutine(DrawPath());
     }
 
-    private void OnEnable()
+    public void RefreshDrawPath()
     {
         if (currentDraw != null)
         {
-            StopCoroutine(currentDraw);
+            StopAllCoroutines();
         }
         currentDraw = StartCoroutine(DrawPath());
     }
