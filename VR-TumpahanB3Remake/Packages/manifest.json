@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.redbluegames.mulligan": "https://github.com/redbluegames/unity-mulligan-renamer.git?path=/Assets/RedBlueGames/MulliganRenamer",
     "com.unity.animation.rigging": "1.2.1",
     "com.unity.collab-proxy": "2.5.1",
     "com.unity.feature.vr": "1.0.0",

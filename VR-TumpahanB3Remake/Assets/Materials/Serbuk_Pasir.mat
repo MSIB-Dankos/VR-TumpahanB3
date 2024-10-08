@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Serbuk_Pasir
-  m_Shader: {fileID: -6465566751694194690, guid: 2a5f3bff0d057b042bf68400cbc466e4,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: 7200aef8a341733498b6598b176e0828, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -114,6 +113,8 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - g_flCornerAdjust: 0.5
+    - g_flOutlineWidth: 0.0005
     m_Colors:
     - _BaseColor: {r: 0.7283019, g: 0.58422923, b: 0.36689925, a: 1}
     - _Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
