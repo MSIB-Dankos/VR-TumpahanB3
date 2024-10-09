@@ -9,8 +9,12 @@ public class EventBus : SerializedMonoBehaviour
 {
     public Dictionary<string, UnityEvent> ActionMap = new Dictionary<string, UnityEvent>();
 
-    public void Invoke(string actionName)
+    public void RunAction(string actionName)
     {
+        if (actionName == "")
+        {
+            return;
+        }
         ActionMap[actionName].Invoke();
     }
 }
