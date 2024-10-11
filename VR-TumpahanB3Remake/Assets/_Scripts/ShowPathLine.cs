@@ -8,34 +8,28 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(LineRenderer))]
 public class ShowPathLine : MonoBehaviour
 {
-    [OnValueChanged("RefreshDrawPath")] public Transform target;
+    public Transform target;
     public float offsetHeight = 0.5f;
-    public float updateSpeed = 0.25f;
+    public float updateTime = 0.25f;
 
     private LineRenderer pathRenderer;
-    private Coroutine currentDraw;
+    private float time;
 
     private void Awake()
     {
-        currentDraw = StartCoroutine(DrawPath());
+        pathRenderer = GetComponent<LineRenderer>();
     }
 
-    public void RefreshDrawPath()
+    private void Update()
     {
-        if (currentDraw != null)
+        if (time < updateTime)
         {
-            StopAllCoroutines();
+            time += Time.deltaTime;
+            return;
         }
-        currentDraw = StartCoroutine(DrawPath());
-    }
-
-    private IEnumerator DrawPath()
-    {
-        WaitForSeconds wait = new WaitForSeconds(updateSpeed);
-        NavMeshPath path = new NavMeshPath();
-
-        while (target != null)
+        if (target != null)
         {
+            NavMeshPath path = new NavMeshPath();
             if (NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
             {
                 pathRenderer.positionCount = path.corners.Length;
@@ -44,11 +38,21 @@ public class ShowPathLine : MonoBehaviour
                     pathRenderer.SetPosition(i, path.corners[i] + Vector3.up * offsetHeight);
                 }
             }
-            else
-            {
-                Debug.LogError($"Unable to calculate path on NavMesh between {transform.position} and {target.position}!");
-            }
-            yield return wait;
+            time = 0.0f;
         }
+        else
+        {
+            pathRenderer.positionCount = 0;
+        }
+    }
+
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
+
+    public void SetNoTarget()
+    {
+        target = null;
     }
 }

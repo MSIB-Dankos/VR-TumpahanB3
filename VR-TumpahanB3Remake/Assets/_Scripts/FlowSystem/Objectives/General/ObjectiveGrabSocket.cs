@@ -7,13 +7,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectiveGrabSocket : FlowObjective
 {
     public List<SocketInteractorAllowedObject> socketInteractorAllowedObjects;
+
+    [Header("Debug")]
     [ShowInInspector, ReadOnly] private int socketFilledCount = 0;
+
     private void OnEnable()
     {
         foreach (SocketInteractorAllowedObject socket in socketInteractorAllowedObjects)
         {
-            socket.selectEntered.AddListener(SelectEntered);
-            socket.selectExited.AddListener(SelectExited);
+            socket.selectEntered.AddListener(SocketSelectEntered);
+            socket.selectExited.AddListener(SocketSelectExited);
         }
     }
 
@@ -21,17 +24,17 @@ public class ObjectiveGrabSocket : FlowObjective
     {
         foreach (SocketInteractorAllowedObject socket in socketInteractorAllowedObjects)
         {
-            socket.selectEntered.RemoveListener(SelectEntered);
-            socket.selectExited.AddListener(SelectExited);
+            socket.selectEntered.RemoveListener(SocketSelectEntered);
+            socket.selectExited.AddListener(SocketSelectExited);
         }
     }
 
-    private void SelectEntered(SelectEnterEventArgs args)
+    private void SocketSelectEntered(SelectEnterEventArgs args)
     {
         socketFilledCount++;
     }
 
-    private void SelectExited(SelectExitEventArgs args)
+    private void SocketSelectExited(SelectExitEventArgs args)
     {
         socketFilledCount--;
     }

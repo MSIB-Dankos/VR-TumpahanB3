@@ -10,7 +10,7 @@ public class NumpadController : MonoBehaviour
 {
     public TMP_Text inputFieldText;
     public Button submitButton;
-    public UnityEvent OnSubmit;
+    public UnityEvent<string> OnSubmit;
 
     [ShowInInspector, ReadOnly] private string currentNumber;
 
@@ -22,7 +22,7 @@ public class NumpadController : MonoBehaviour
 
     private void Submit()
     {
-        OnSubmit?.Invoke();
+        OnSubmit?.Invoke(currentNumber);
         currentNumber = "";
         UpdateNumberText();
     }
