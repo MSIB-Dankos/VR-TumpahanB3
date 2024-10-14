@@ -13,24 +13,25 @@ public class ShowPathLine : MonoBehaviour
     public float updateTime = 0.25f;
 
     private LineRenderer pathRenderer;
-    private float time;
+    private WaitForSeconds updateTimeYield;
 
     private void Awake()
     {
         pathRenderer = GetComponent<LineRenderer>();
+        StartCoroutine(UpdatePath());
     }
 
-    private void Update()
+    private IEnumerator UpdatePath()
     {
-        if (time < updateTime)
+        updateTimeYield = new WaitForSeconds(updateTime);
+        NavMeshPath path = new NavMeshPath();
+
+        while (true)
         {
-            time += Time.deltaTime;
-            return;
-        }
-        if (target != null)
-        {
-            NavMeshPath path = new NavMeshPath();
-            if (NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
+#if UNITY_EDITOR
+            updateTimeYield = new WaitForSeconds(updateTime);
+#endif
+            if (target != null && NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
             {
                 pathRenderer.positionCount = path.corners.Length;
                 for (int i = 0; i < path.corners.Length; i++)
@@ -38,11 +39,11 @@ public class ShowPathLine : MonoBehaviour
                     pathRenderer.SetPosition(i, path.corners[i] + Vector3.up * offsetHeight);
                 }
             }
-            time = 0.0f;
-        }
-        else
-        {
-            pathRenderer.positionCount = 0;
+            else
+            {
+                pathRenderer.positionCount = 0;
+            }
+            yield return updateTimeYield;
         }
     }
 

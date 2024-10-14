@@ -40,6 +40,12 @@ public class VoiceLineQueue : MonoBehaviour
         }
     }
 
+    public void RestartAudio()
+    {
+        audioSource.clip = voiceQueue[currentAudioIndex].audioClip;
+        audioSource.Play();
+    }
+
     public void NextAudio()
     {
         if (voiceQueue[currentAudioIndex].canSkipped)
@@ -53,5 +59,10 @@ public class VoiceLineQueue : MonoBehaviour
         {
             queueCount++;
         }
+    }
+
+    public int GetCurrentAudioIndex()
+    {
+        return currentAudioIndex;
     }
 }
