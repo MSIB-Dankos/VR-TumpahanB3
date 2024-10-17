@@ -17,4 +17,22 @@ public class EventBus : SerializedMonoBehaviour
         }
         ActionMap[actionName].Invoke();
     }
+
+    public void AddListener(string actionName, System.Action action)
+    {
+        if (actionName == "")
+        {
+            return;
+        }
+        ActionMap[actionName].AddListener(action.Invoke);
+    }
+
+    public void RemoveListener(string actionName, System.Action action)
+    {
+        if (actionName == "")
+        {
+            return;
+        }
+        ActionMap[actionName].RemoveListener(action.Invoke);
+    }
 }

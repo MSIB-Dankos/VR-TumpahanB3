@@ -19,6 +19,10 @@ public class FlowManager : MonoBehaviour
 
     private void Start()
     {
+        if (flowList.Count == 0)
+        {
+            return;
+        }
         SetFlow(0);
     }
 

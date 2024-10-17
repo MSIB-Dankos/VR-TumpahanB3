@@ -34,7 +34,7 @@ public class BookOpen : MonoBehaviour
         }
         else
         {
-            animator.SetFloat("Open", 0.0f);
+            animator.SetFloat("Open", Mathf.Lerp(animator.GetFloat("Open"), 0.0f, Time.deltaTime));
         }
     }
 
