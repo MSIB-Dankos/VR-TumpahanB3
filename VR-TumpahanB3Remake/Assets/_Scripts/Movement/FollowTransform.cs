@@ -18,6 +18,11 @@ public class FollowTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!target)
+        {
+            return;
+        }
+        
         if (followType.HasFlag(FollowType.Position))
         {
             transform.position = target.position;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InfoRotateAround : MonoBehaviour
 {
+    public bool inversRotation = false;
     public Transform targetObject;
     public float rotationThreshold = 30f;
     public float rotationSpeed = 5f;
@@ -17,7 +18,7 @@ public class InfoRotateAround : MonoBehaviour
 
         if (angle > rotationThreshold)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+            Quaternion targetRotation = Quaternion.LookRotation(inversRotation ? -directionToPlayer : directionToPlayer);
 
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }

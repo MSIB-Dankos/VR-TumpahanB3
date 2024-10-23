@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class LinkedFlow : MonoBehaviour
 {
+    [InfoBox("Flow akan dikaitkan dengan menjalankannya secara berurutan, Flow Manager dijalankan dari atas ke bawah", InfoMessageType.Info)]
     public List<FlowManager> flowManagerList = new List<FlowManager>();
 
     private int currentActive = 0;

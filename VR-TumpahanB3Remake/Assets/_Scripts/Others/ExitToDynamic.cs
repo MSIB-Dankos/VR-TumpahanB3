@@ -17,6 +17,8 @@ public class ExitToDynamic : MonoBehaviour
             Rigidbody rb = obj.GetComponent<Rigidbody>();
             rb.isKinematic = true;
             rb.useGravity = false;
+
+            Debug.Log("Enter Spill Kit");
         }
     }
 
@@ -30,6 +32,8 @@ public class ExitToDynamic : MonoBehaviour
             Rigidbody rb = obj.GetComponent<Rigidbody>();
             rb.isKinematic = false;
             rb.useGravity = true;
+
+            Debug.Log("Exit Spill Kit");
         }
     }
 }
