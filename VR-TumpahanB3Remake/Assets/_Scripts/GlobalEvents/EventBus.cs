@@ -4,9 +4,25 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EventBus : SerializedMonoBehaviour
+public class EventBus : MonoBehaviour
 {
-    public Dictionary<string, UnityEvent> ActionMap = new Dictionary<string, UnityEvent>();
+    [System.Serializable]
+    public class ActionEventMap
+    {
+        public string eventName;
+        public UnityEvent eventAction;
+    }
+
+    [TableList] public List<ActionEventMap> EventMaps = new List<ActionEventMap>();
+
+    private Dictionary<string, UnityEvent> ActionMap = new Dictionary<string, UnityEvent>();
+    private void Awake()
+    {
+        foreach (ActionEventMap map in EventMaps)
+        {
+            ActionMap.Add(map.eventName, map.eventAction);
+        }
+    }
 
     public void RunAction(string actionName)
     {

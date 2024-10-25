@@ -27,11 +27,37 @@ public class ObjectiveTelephone : FlowObjective
 
     private void OnCall(string number)
     {
-        isCorrect = targetNumber == number;
+        StartCoroutine(CallTextAnimateRoutine());
+
+        IEnumerator CallTextAnimateRoutine()
+        {
+            numpadController.Clear();
+            numpadController.Disable();
+            WaitForSeconds textDotWait = new WaitForSeconds(0.25f);
+
+            for (int i = 0; i < 10; i++)
+            {
+                numpadController.AddNumber(".");
+                if (i % 3 == 0)
+                {
+                    numpadController.Clear();
+                }
+                yield return textDotWait;
+            }
+            numpadController.Clear();
+
+            isCorrect = targetNumber == number;
+            if (!isCorrect)
+            {
+                onFailed?.Invoke();
+            }
+
+            numpadController.Enable();
+        }
     }
 
     public override bool IsFlowComplete()
-    {   
+    {
         return isCorrect;
     }
 }

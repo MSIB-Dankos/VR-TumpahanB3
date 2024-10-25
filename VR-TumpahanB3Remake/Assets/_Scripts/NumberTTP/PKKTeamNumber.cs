@@ -22,14 +22,14 @@ public class PKKTeamNumber : MonoBehaviour
         {SITE.HJ, "1105"}
     };
 
-    public static SITE currentSite = SITE.KF;
+    public static SITE currentSite { get; private set; } = SITE.KF;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SetSite(int siteID)
+    public static void SetSite(int siteID)
     {
         currentSite = (SITE)siteID;
         Debug.Log($"Set SITE = {currentSite} : {siteNumbers[currentSite]}");
