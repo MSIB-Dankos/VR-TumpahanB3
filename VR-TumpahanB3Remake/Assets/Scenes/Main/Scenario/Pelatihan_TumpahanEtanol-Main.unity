@@ -3581,7 +3581,7 @@ GameObject:
   - component: {fileID: 119272504}
   - component: {fileID: 119272508}
   - component: {fileID: 119272507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20106,6 +20106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 071d159a2b96fea48907412fc891e45a,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 071d159a2b96fea48907412fc891e45a,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -22270,6 +22275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 685d2772fc6d2a548bb2b4717012b031,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -23984,7 +23994,7 @@ GameObject:
   - component: {fileID: 846984476}
   - component: {fileID: 846984478}
   - component: {fileID: 846984477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spill Kit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47546,7 +47556,7 @@ GameObject:
   - component: {fileID: 1707289372}
   - component: {fileID: 1707289371}
   - component: {fileID: 1707289370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kain Bebas Serat 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48671,7 +48681,7 @@ GameObject:
   - component: {fileID: 1756301215}
   - component: {fileID: 1756301214}
   - component: {fileID: 1756301213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Masker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51094,6 +51104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Safety glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9aacf58a0a5b8384ba08e676a93390c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53649,6 +53664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: New XR Setup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225981812976577455, guid: be226bd024e366247b8a91db8d0589cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4256917388509860493, guid: be226bd024e366247b8a91db8d0589cb,
         type: 3}
@@ -58023,7 +58043,7 @@ GameObject:
   - component: {fileID: 2065079471}
   - component: {fileID: 2065079470}
   - component: {fileID: 2065079469}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kain Bebas Serat 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60663,7 +60683,7 @@ GameObject:
   - component: {fileID: 1421391030}
   - component: {fileID: 1421391029}
   - component: {fileID: 1421391028}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tutup Spill Kit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60713,6 +60733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Warning-Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689050943706844960, guid: ab6fb1bda4fb0a04eba3457aabc3feec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5982381920818925631, guid: ab6fb1bda4fb0a04eba3457aabc3feec,
         type: 3}
@@ -62262,7 +62287,7 @@ GameObject:
   - component: {fileID: 6064961838480008056}
   - component: {fileID: 5762033713585064603}
   - component: {fileID: 807784495052519973}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
