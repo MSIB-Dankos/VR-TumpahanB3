@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Custom_HalfTransparent
+  m_Name: JasLab_Hand
   m_Shader: {fileID: -6465566751694194690, guid: 11805fb988cf51d45b8ba2701afd9afe,
     type: 3}
   m_Parent: {fileID: 0}

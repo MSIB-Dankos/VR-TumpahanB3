@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 24745890}
   - component: {fileID: 24745891}
   - component: {fileID: 24745892}
+  - component: {fileID: 24745893}
   m_Layer: 0
   m_Name: Pilih Site
   m_TagString: Untagged
@@ -322,6 +323,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &24745893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24745889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &30916845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1873,7 @@ GameObject:
   - component: {fileID: 263955128}
   - component: {fileID: 263955129}
   - component: {fileID: 263955130}
+  - component: {fileID: 263955131}
   m_Layer: 0
   m_Name: Tidak Ada Garis
   m_TagString: Untagged
@@ -1950,6 +1967,21 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &263955131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263955127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &281719332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,6 +2528,7 @@ GameObject:
   - component: {fileID: 377811878}
   - component: {fileID: 377811880}
   - component: {fileID: 377811879}
+  - component: {fileID: 377811881}
   m_Layer: 0
   m_Name: Book Open
   m_TagString: Untagged
@@ -2614,6 +2647,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookAnimator: {fileID: 443128911}
+--- !u!114 &377811881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377811877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &383980436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +4013,7 @@ GameObject:
   - component: {fileID: 626776305}
   - component: {fileID: 626776306}
   - component: {fileID: 626776307}
+  - component: {fileID: 626776308}
   m_Layer: 0
   m_Name: Control and Movement
   m_TagString: Untagged
@@ -4058,6 +4107,21 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &626776308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626776304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &630433089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,6 +4288,7 @@ GameObject:
   - component: {fileID: 653938258}
   - component: {fileID: 653938257}
   - component: {fileID: 653938256}
+  - component: {fileID: 653938259}
   m_Layer: 0
   m_Name: Grab and Socket
   m_TagString: Untagged
@@ -4280,8 +4345,8 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1698815767}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        - m_Target: {fileID: 1698815769}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4292,8 +4357,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2057288150}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        - m_Target: {fileID: 2057288152}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4356,8 +4421,8 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1698815767}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        - m_Target: {fileID: 1698815769}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4368,8 +4433,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2057288150}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        - m_Target: {fileID: 2057288152}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4448,6 +4513,21 @@ MonoBehaviour:
   grabInteractables:
   - {fileID: 819752029}
   - {fileID: 194039557}
+--- !u!114 &653938259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653938253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &655162025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,50 +4857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729211809}
   m_CullTransparentMesh: 1
---- !u!1 &755427947
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 755427949}
-  - component: {fileID: 755427948}
-  m_Layer: 0
-  m_Name: Fix Event bus
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &755427948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755427947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7f6f198853a074793a66350523b197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &755427949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755427947}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767887917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5951,6 +5987,7 @@ GameObject:
   - component: {fileID: 1019881074}
   - component: {fileID: 1019881075}
   - component: {fileID: 1019881076}
+  - component: {fileID: 1019881077}
   m_Layer: 0
   m_Name: Selamat Datang
   m_TagString: Untagged
@@ -6020,6 +6057,21 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1019881077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019881073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1001 &1023815879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8699,6 +8751,7 @@ GameObject:
   - component: {fileID: 1579100232}
   - component: {fileID: 1579100233}
   - component: {fileID: 1579100234}
+  - component: {fileID: 1579100235}
   m_Layer: 0
   m_Name: Numpad Submit
   m_TagString: Untagged
@@ -8816,6 +8869,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1579100235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579100231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &1598795847
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,6 +9399,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ac48c3fcecf89c049a70dead19ed7357, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 59b401f1f53406847a3ce84059989bd3,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6621982926028634229, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 59b401f1f53406847a3ce84059989bd3,
         type: 3}
       propertyPath: m_Name
@@ -9370,7 +9444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698815766}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -9560,11 +9634,11 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5695356228159072499, guid: 59b401f1f53406847a3ce84059989bd3, type: 3}
+  m_Mesh: {fileID: -6621982926028634229, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!4 &1698815770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59b401f1f53406847a3ce84059989bd3,
@@ -10645,6 +10719,7 @@ GameObject:
   - component: {fileID: 1894819079}
   - component: {fileID: 1894819080}
   - component: {fileID: 1894819081}
+  - component: {fileID: 1894819082}
   m_Layer: 0
   m_Name: Garis Penunjuk
   m_TagString: Untagged
@@ -10762,6 +10837,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1894819082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894819078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &1906846533
 GameObject:
   m_ObjectHideFlags: 0
@@ -10773,6 +10863,7 @@ GameObject:
   - component: {fileID: 1906846534}
   - component: {fileID: 1906846535}
   - component: {fileID: 1906846536}
+  - component: {fileID: 1906846537}
   m_Layer: 0
   m_Name: Grab JasLab
   m_TagString: Untagged
@@ -10962,6 +11053,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+--- !u!114 &1906846537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906846533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec059336c0cf5844d9a5b2143c6490de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 383980438}
+  audioClip: {fileID: 8300000, guid: d1ec68848bf67bf418390d7d4a176bf1, type: 3}
+  eventAfterFlow: OnEndFlow
 --- !u!1 &1920482808
 GameObject:
   m_ObjectHideFlags: 0
@@ -11793,6 +11899,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ac48c3fcecf89c049a70dead19ed7357, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 59b401f1f53406847a3ce84059989bd3,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6621982926028634229, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 59b401f1f53406847a3ce84059989bd3,
         type: 3}
       propertyPath: m_Name
@@ -11832,7 +11944,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057288149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -12022,11 +12134,11 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5695356228159072499, guid: 59b401f1f53406847a3ce84059989bd3, type: 3}
+  m_Mesh: {fileID: -6621982926028634229, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!4 &2057288153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59b401f1f53406847a3ce84059989bd3,
@@ -12725,6 +12837,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2094549480}
     m_Modifications:
+    - target: {fileID: 22627279055970507, guid: 5e8229ea2fb7afc479030a7c080984a1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dab0ed542e9eeec48b8bbc22c24eae81, type: 2}
     - target: {fileID: 6444646697758285252, guid: 5e8229ea2fb7afc479030a7c080984a1,
         type: 3}
       propertyPath: m_Name
@@ -13397,4 +13514,3 @@ SceneRoots:
   - {fileID: 1380218713}
   - {fileID: 1460274676}
   - {fileID: 499589538}
-  - {fileID: 755427949}
