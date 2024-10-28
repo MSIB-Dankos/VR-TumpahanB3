@@ -15,22 +15,14 @@ public class EventBus : MonoBehaviour
 
     [TableList] public List<ActionEventMap> EventMaps = new List<ActionEventMap>();
 
-    private Dictionary<string, UnityEvent> ActionMap = new Dictionary<string, UnityEvent>();
-    private void Awake()
-    {
-        foreach (ActionEventMap map in EventMaps)
-        {
-            ActionMap.Add(map.eventName, map.eventAction);
-        }
-    }
-
     public void RunAction(string actionName)
     {
         if (actionName == "")
         {
             return;
         }
-        ActionMap[actionName].Invoke();
+        ActionEventMap actionMap = EventMaps[EventMaps.FindIndex(x => x.eventName == actionName)];
+        actionMap.eventAction.Invoke();
     }
 
     public void AddListener(string actionName, System.Action action)
@@ -39,7 +31,8 @@ public class EventBus : MonoBehaviour
         {
             return;
         }
-        ActionMap[actionName].AddListener(action.Invoke);
+        ActionEventMap actionMap = EventMaps[EventMaps.FindIndex(x => x.eventName == actionName)];
+        actionMap.eventAction.AddListener(action.Invoke);
     }
 
     public void RemoveListener(string actionName, System.Action action)
@@ -48,6 +41,7 @@ public class EventBus : MonoBehaviour
         {
             return;
         }
-        ActionMap[actionName].RemoveListener(action.Invoke);
+        ActionEventMap actionMap = EventMaps[EventMaps.FindIndex(x => x.eventName == actionName)];
+        actionMap.eventAction.RemoveListener(action.Invoke);
     }
 }

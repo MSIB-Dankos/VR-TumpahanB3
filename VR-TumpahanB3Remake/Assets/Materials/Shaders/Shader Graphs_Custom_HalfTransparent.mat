@@ -70,7 +70,7 @@ Material:
     m_Colors:
     - _Axis: {r: 0, g: 1, b: 0, a: 0}
     - _CenterRotate: {r: 1, g: 1, b: 0, a: 0}
-    - _Color: {r: 0.105882294, g: 0.57647055, b: 0.30980387, a: 0.654902}
+    - _Color: {r: 0.9547169, g: 0.89473116, b: 0.6394802, a: 0.654902}
     - _Position: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4983197342538899042

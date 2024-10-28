@@ -44881,23 +44881,23 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
+        m_Calls: []
+  - eventName: OnEndFlow
+    eventAction:
+      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
+        - m_Target: {fileID: 1091035583}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
-  - eventName: OnEndFlow
-    eventAction:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!114 &1616413254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52936,50 +52936,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!1 &1884149944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884149946}
-  - component: {fileID: 1884149945}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1884149945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884149944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7f6f198853a074793a66350523b197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1884149946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884149944}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1884828511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63389,4 +63345,3 @@ SceneRoots:
   - {fileID: 4400013404880374544}
   - {fileID: 1459047487}
   - {fileID: 519410620}
-  - {fileID: 1884149946}
