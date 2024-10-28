@@ -4345,8 +4345,8 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1698815769}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        - m_Target: {fileID: 1698815767}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4357,8 +4357,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2057288152}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        - m_Target: {fileID: 2057288150}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4421,8 +4421,8 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1698815769}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        - m_Target: {fileID: 1698815767}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -4433,8 +4433,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2057288152}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        - m_Target: {fileID: 2057288150}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -9634,7 +9634,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -12134,7 +12134,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
