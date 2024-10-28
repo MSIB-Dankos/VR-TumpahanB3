@@ -5860,7 +5860,19 @@ MonoBehaviour:
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 14949210}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeOut
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &192802710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9749,6 +9761,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1885172779}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
   - eventName: OnEndFlow
@@ -22314,6 +22338,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 793171267}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793171270}
   m_SourcePrefab: {fileID: 100100000, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!4 &793171265 stripped
 Transform:
@@ -22363,6 +22391,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders:
   - {fileID: 793171267}
+  - {fileID: 793171270}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -22528,6 +22557,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &793171270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793171266}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 2, y: 0.25, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &793172572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34517,7 +34567,7 @@ MonoBehaviour:
             m_StringArgument: FadeIn
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 793171267}
+        - m_Target: {fileID: 793171270}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -34557,7 +34607,7 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 793171267}
+        - m_Target: {fileID: 793171270}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -42443,8 +42493,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1550415047
 MonoBehaviour:
   m_ObjectHideFlags: 0
