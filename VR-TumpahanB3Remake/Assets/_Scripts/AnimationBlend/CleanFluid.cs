@@ -2,20 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class CleanFluid : MonoBehaviour
 {
     public float cleanTime;
     public GameObject cleanerObject;
+    public Animator animator;
 
     private float currentTime;
-    private Animator animator;
     private bool isClean = false;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     public bool IsClean()
     {
