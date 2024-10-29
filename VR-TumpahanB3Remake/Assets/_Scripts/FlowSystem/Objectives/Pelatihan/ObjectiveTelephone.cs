@@ -8,6 +8,9 @@ public class ObjectiveTelephone : FlowObjective
 {
     public NumpadController numpadController;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+
     [Header("Events")]
     public UnityEvent onFailed;
 
@@ -31,6 +34,7 @@ public class ObjectiveTelephone : FlowObjective
 
         IEnumerator CallTextAnimateRoutine()
         {
+            audioSource.Play();
             numpadController.Clear();
             numpadController.Disable();
             WaitForSeconds textDotWait = new WaitForSeconds(0.25f);
@@ -53,6 +57,7 @@ public class ObjectiveTelephone : FlowObjective
             }
 
             numpadController.Enable();
+            audioSource.Stop();
         }
     }
 

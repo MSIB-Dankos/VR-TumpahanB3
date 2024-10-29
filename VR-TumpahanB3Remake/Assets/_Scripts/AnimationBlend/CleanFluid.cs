@@ -6,7 +6,10 @@ public class CleanFluid : MonoBehaviour
 {
     public float cleanTime;
     public GameObject cleanerObject;
+    public MeshRendererController meshRendererController;
     public Animator animator;
+
+    public float darkerAmount = 1.0f;
 
     private float currentTime;
     private bool isClean = false;
@@ -22,7 +25,17 @@ public class CleanFluid : MonoBehaviour
         {
             currentTime += Time.fixedDeltaTime;
             currentTime = Mathf.Clamp(currentTime, 0, cleanTime);
-            animator.SetFloat("Clean", currentTime / cleanTime);
+            float value = currentTime / cleanTime;
+
+            animator.SetFloat("Clean", value);
+
+            value = darkerAmount * Time.fixedDeltaTime;
+            Color currentColor = meshRendererController.meshRenderers[0].material.color;
+            meshRendererController.SetColors(new Color(
+                currentColor.r - value,
+                currentColor.g - value,
+                currentColor.b - value
+            ));
 
             if (currentTime == cleanTime)
             {
