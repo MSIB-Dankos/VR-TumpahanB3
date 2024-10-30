@@ -9,23 +9,28 @@ public class ObjectiveWaitAbsorb : FlowObjective
     public Vector3 absorbedScale;
     public float targetTimeInSecond;
 
-    [ShowInInspector, ReadOnly] private float currentTargetScale = 0.0f;
+    [Header("Mesh Color")]
+    public MeshRendererController meshRendererController;
+    public Color endColor;
+
+    [ShowInInspector, ReadOnly] private float value01 = 0.0f;
     [ShowInInspector, ReadOnly] private float currentTime = 0.0f;
     [ShowInInspector, ReadOnly] private Vector3 startScale;
-
+    [ShowInInspector, ReadOnly] private Color startColor;
     private void Awake()
     {
         startScale = absorbObject.transform.localScale;
+        startColor = meshRendererController.meshRenderers[0].material.color;
     }
 
-    // Update per frame
     public override bool IsFlowComplete()
     {
         currentTime += Time.deltaTime;
-        currentTargetScale = Mathf.Clamp01(currentTime / targetTimeInSecond);
+        value01 = Mathf.Clamp01(currentTime / targetTimeInSecond);
 
-        absorbObject.transform.localScale = Vector3.Lerp(startScale, absorbedScale, currentTargetScale);
+        absorbObject.transform.localScale = Vector3.Lerp(startScale, absorbedScale, value01);
+        meshRendererController.SetColors(Color.Lerp(startColor, endColor, value01));
 
-        return currentTargetScale == 1.0f;
+        return value01 == 1.0f;
     }
 }

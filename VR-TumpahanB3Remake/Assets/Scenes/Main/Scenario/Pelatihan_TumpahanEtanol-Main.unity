@@ -8421,6 +8421,8 @@ MonoBehaviour:
   absorbObject: {fileID: 1749510057}
   absorbedScale: {x: 0, y: 0, z: 0}
   targetTimeInSecond: 30
+  meshRendererController: {fileID: 2065079473}
+  endColor: {r: 0.21568629, g: 0.21176472, b: 0.13725491, a: 1}
 --- !u!114 &268176813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58994,6 +58996,7 @@ GameObject:
   - component: {fileID: 2065079470}
   - component: {fileID: 2065079469}
   - component: {fileID: 2065079472}
+  - component: {fileID: 2065079473}
   m_Layer: 3
   m_Name: Kain Bebas Serat 1
   m_TagString: Untagged
@@ -59241,6 +59244,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.62760943, y: 0.10000001, z: 0.559539}
   m_Center: {x: 0.06380474, y: 0.07, z: 0.029769536}
+--- !u!114 &2065079473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065079467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc9bb44a3575ad47aa5c690a41efd22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderers:
+  - {fileID: 3638974448989687035}
+  - {fileID: 2050115387}
+  - {fileID: 2018318560}
+  - {fileID: 933716364}
+  - {fileID: 2100601105}
+  - {fileID: 2063612033}
+  - {fileID: 1888619196}
+  - {fileID: 1422364823}
+  - {fileID: 26173781}
+  - {fileID: 515024228}
 --- !u!1001 &2067022191
 PrefabInstance:
   m_ObjectHideFlags: 0
