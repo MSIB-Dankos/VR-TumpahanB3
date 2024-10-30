@@ -26,6 +26,10 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
     private void OnSelect(SelectEnterEventArgs args)
     {
+        if (args.interactorObject is SocketInteractorAllowedObject || args.interactableObject is XRSocketInteractor)
+        {
+            return;
+        }
         if (gloveMode)
         {
             leftGlove.enabled = true;
