@@ -2187,7 +2187,7 @@ GameObject:
   - component: {fileID: 55280547}
   - component: {fileID: 55280549}
   - component: {fileID: 55280548}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2544,7 +2544,7 @@ GameObject:
   - component: {fileID: 85858595}
   - component: {fileID: 85858594}
   - component: {fileID: 85858596}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button-Metanol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8668,7 +8668,7 @@ GameObject:
   - component: {fileID: 258850326}
   - component: {fileID: 258850328}
   - component: {fileID: 258850327}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19158,7 +19158,7 @@ GameObject:
   - component: {fileID: 616691449}
   - component: {fileID: 616691451}
   - component: {fileID: 616691450}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29859,7 +29859,7 @@ GameObject:
   - component: {fileID: 985656174}
   - component: {fileID: 985656176}
   - component: {fileID: 985656175}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30305,7 +30305,7 @@ GameObject:
   - component: {fileID: 1010609904}
   - component: {fileID: 1010609906}
   - component: {fileID: 1010609905}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34580,7 +34580,7 @@ GameObject:
   - component: {fileID: 1143687525}
   - component: {fileID: 1143687527}
   - component: {fileID: 1143687526}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35169,7 +35169,7 @@ GameObject:
   - component: {fileID: 1159698721}
   - component: {fileID: 1159698723}
   - component: {fileID: 1159698722}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36604,7 +36604,7 @@ GameObject:
   - component: {fileID: 1209484725}
   - component: {fileID: 1209484729}
   - component: {fileID: 1209484730}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI-Pertanyaan Jenis Tumpahan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36663,7 +36663,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1209484727
 MonoBehaviour:
@@ -45620,7 +45620,7 @@ GameObject:
   - component: {fileID: 1552719753}
   - component: {fileID: 1552719755}
   - component: {fileID: 1552719754}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48299,7 +48299,7 @@ GameObject:
   - component: {fileID: 1646037483}
   - component: {fileID: 1646037482}
   - component: {fileID: 1646037484}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button-Butanol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50688,7 +50688,7 @@ GameObject:
   - component: {fileID: 1701039262}
   - component: {fileID: 1701039264}
   - component: {fileID: 1701039263}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64104,7 +64104,7 @@ GameObject:
   - component: {fileID: 2143400813}
   - component: {fileID: 2143400812}
   - component: {fileID: 2143400814}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button-Etanol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
