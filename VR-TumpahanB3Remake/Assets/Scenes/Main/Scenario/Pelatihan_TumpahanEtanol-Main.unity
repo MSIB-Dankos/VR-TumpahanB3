@@ -13619,7 +13619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 18
+  targetVoiceIndex: 19
 --- !u!114 &449060427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17237,7 +17237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 21
+  targetVoiceIndex: 22
 --- !u!114 &565040296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17480,7 +17480,7 @@ GameObject:
   - component: {fileID: 573661506}
   - component: {fileID: 573661507}
   m_Layer: 0
-  m_Name: SoundQuestion
+  m_Name: WrongAnswerSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17512,7 +17512,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 929f0778c6cd2bf4ba5ba96b26ef785d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -18368,7 +18368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 20
+  targetVoiceIndex: 21
 --- !u!114 &602075407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18614,7 +18614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 2
+  targetVoiceIndex: 3
 --- !u!1001 &607760546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20459,6 +20459,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2034450036}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &678068199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20485,6 +20497,30 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
+            m_StringArgument: FadeIn
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1209484726}
+          m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+          m_MethodName: set_interactable
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2034450037}
+          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
+          m_MethodName: NextAudio
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -20492,13 +20528,37 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1209484723}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
+        - m_Target: {fileID: 1209484725}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeOut
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1209484726}
+          m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+          m_MethodName: set_interactable
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 573661507}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Stop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -23077,7 +23137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 19
+  targetVoiceIndex: 20
 --- !u!114 &746670656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27479,16 +27539,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowList:
+  - flowObjective: {fileID: 678068198}
+    eventBus: {fileID: 678068199}
+    eventBeforeFlow: OnStartFlow
+    eventAfterFlow: OnEndFlow
   - flowObjective: {fileID: 1616413254}
     eventBus: {fileID: 1616413253}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 1924230703}
-    eventBus: {fileID: 1924230702}
-    eventBeforeFlow: OnStartFlow
-    eventAfterFlow: OnEndFlow
   - flowObjective: {fileID: 1948680651}
     eventBus: {fileID: 1948680652}
+    eventBeforeFlow: OnStartFlow
+    eventAfterFlow: OnEndFlow
+  - flowObjective: {fileID: 1924230703}
+    eventBus: {fileID: 1924230702}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - flowObjective: {fileID: 605845394}
@@ -36538,6 +36602,7 @@ GameObject:
   - component: {fileID: 1209484727}
   - component: {fileID: 1209484726}
   - component: {fileID: 1209484725}
+  - component: {fileID: 1209484729}
   m_Layer: 0
   m_Name: UI-Pertanyaan Jenis Tumpahan
   m_TagString: Untagged
@@ -36596,7 +36661,7 @@ CanvasGroup:
   m_GameObject: {fileID: 1209484723}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
+  m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1209484727
@@ -36645,6 +36710,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1209484729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209484723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b77a6674c6e340a526fa709b3cadc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inversRotation: 1
+  targetObject: {fileID: 1940146948}
+  rotationThreshold: 30
+  rotationSpeed: 5
 --- !u!1 &1210426065
 GameObject:
   m_ObjectHideFlags: 0
@@ -60415,6 +60496,8 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: 9df28a0bc800a4547ac0573cfd741c67, type: 3}
     canSkipped: 0
   - audioClip: {fileID: 8300000, guid: 5182cfaea8f6e6d45aed62f9dd3ad69f, type: 3}
+    canSkipped: 1
+  - audioClip: {fileID: 8300000, guid: 1aab5d8844bd8ac4faf3415b1ff8189f, type: 3}
     canSkipped: 1
   - audioClip: {fileID: 8300000, guid: 272cd4f2fb5bda0449d43b8e280283f1, type: 3}
     canSkipped: 0

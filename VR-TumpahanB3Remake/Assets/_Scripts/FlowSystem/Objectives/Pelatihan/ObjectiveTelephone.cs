@@ -34,18 +34,21 @@ public class ObjectiveTelephone : FlowObjective
 
         IEnumerator CallTextAnimateRoutine()
         {
-            audioSource.Play();
             numpadController.Clear();
             numpadController.Disable();
+
             WaitForSeconds textDotWait = new WaitForSeconds(0.25f);
 
             for (int i = 0; i < 10; i++)
             {
+                if (!audioSource.isPlaying) audioSource.Play();
                 numpadController.AddNumber(".");
                 if (i % 3 == 0)
                 {
                     numpadController.Clear();
                 }
+                
+                if (i % 2 == 0) audioSource.Stop();
                 yield return textDotWait;
             }
             numpadController.Clear();
