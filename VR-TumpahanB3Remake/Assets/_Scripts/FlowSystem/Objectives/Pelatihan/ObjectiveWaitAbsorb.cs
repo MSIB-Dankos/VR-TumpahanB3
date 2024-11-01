@@ -2,35 +2,79 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectiveWaitAbsorb : FlowObjective
 {
-    public GameObject absorbObject;
-    public Vector3 absorbedScale;
+    [System.Serializable]
+    public class AbsorbData
+    {
+        public SocketInteractorAllowedObject socketInteractorAllowedObject;
+        [HideInEditorMode, ReadOnly] public Vector3 startScale;
+        [HideInEditorMode, ReadOnly] public bool isAbsorbDone;
+
+        public Coroutine selectRoutine = null;
+    }
+
     public float targetTimeInSecond;
-
-    [Header("Mesh Color")]
-    public MeshRendererController meshRendererController;
-    public Color endColor;
-
-    [ShowInInspector, ReadOnly] private float value01 = 0.0f;
-    [ShowInInspector, ReadOnly] private float currentTime = 0.0f;
-    [ShowInInspector, ReadOnly] private Vector3 startScale;
-    [ShowInInspector, ReadOnly] private Color startColor;
+    public List<AbsorbData> absorbDatas = new List<AbsorbData>();
+    private bool isDone;
     private void Awake()
     {
-        startScale = absorbObject.transform.localScale;
-        startColor = meshRendererController.meshRenderers[0].material.color;
+        for (int i = 0; i < absorbDatas.Count; i++)
+        {
+            AbsorbData absorbData = absorbDatas[i];
+            absorbData.startScale = absorbData.socketInteractorAllowedObject.transform.localScale;
+
+            absorbData.socketInteractorAllowedObject.selectEntered.AddListener(args =>
+            {
+                if (absorbData.selectRoutine != null)
+                {
+                    return;
+                }
+                absorbData.selectRoutine = StartCoroutine(OnSelectEntered(absorbData));
+            });
+
+            absorbData.socketInteractorAllowedObject.selectExited.AddListener(args =>
+            {
+                if (absorbData.selectRoutine != null)
+                {
+                    StopCoroutine(absorbData.selectRoutine);
+                    absorbData.selectRoutine = null;
+                }
+            });
+        }
+    }
+
+    private IEnumerator OnSelectEntered(AbsorbData absorbData)
+    {
+        float currentTime = 0.0f;
+        float value01 = 0.0f;
+        while (value01 < 1.0f)
+        {
+            currentTime += Time.deltaTime;
+            value01 = Mathf.Clamp01(currentTime / targetTimeInSecond);
+
+            absorbData.socketInteractorAllowedObject.transform.localScale = Vector3.Lerp(absorbData.startScale, Vector3.zero, value01);
+            yield return null;
+        }
+
+        absorbData.isAbsorbDone = true;
+
+        bool checkAbsorbDone = true;
+        foreach (AbsorbData data in absorbDatas)
+        {
+            if (!data.isAbsorbDone)
+            {
+                checkAbsorbDone = false;
+            }
+        }
+
+        isDone = checkAbsorbDone;
     }
 
     public override bool IsFlowComplete()
     {
-        currentTime += Time.deltaTime;
-        value01 = Mathf.Clamp01(currentTime / targetTimeInSecond);
-
-        absorbObject.transform.localScale = Vector3.Lerp(startScale, absorbedScale, value01);
-        meshRendererController.SetColors(Color.Lerp(startColor, endColor, value01));
-
-        return value01 == 1.0f;
+        return isDone;
     }
 }
