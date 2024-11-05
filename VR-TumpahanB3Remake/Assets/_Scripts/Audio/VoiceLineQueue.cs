@@ -12,7 +12,7 @@ public class VoiceLineQueue : MonoBehaviour
         public bool canSkipped;
     }
 
-    [TableList(ShowIndexLabels = true)] public List<AudioData> voiceQueue = new List<AudioData>();
+    [TableList(ShowIndexLabels = true), TableMatrix(ResizableColumns = true)] public List<AudioData> voiceQueue = new List<AudioData>();
     public AudioSource audioSource;
 
     private int currentAudioIndex = 0;

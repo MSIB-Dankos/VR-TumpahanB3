@@ -19,28 +19,43 @@ public class CleanFluid : MonoBehaviour
         return isClean;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == cleanerObject)
         {
-            currentTime += Time.fixedDeltaTime;
-            currentTime = Mathf.Clamp(currentTime, 0, cleanTime);
-            float value = currentTime / cleanTime;
-
-            animator.SetFloat("Clean", value);
-
-            value = darkerAmount * Time.fixedDeltaTime;
             Color currentColor = meshRendererController.meshRenderers[0].material.color;
             meshRendererController.SetColors(new Color(
-                currentColor.r - value,
-                currentColor.g - value,
-                currentColor.b - value
+                currentColor.r - darkerAmount,
+                currentColor.g - darkerAmount,
+                currentColor.b - darkerAmount
             ));
-
-            if (currentTime == cleanTime)
-            {
-                isClean = true;
-            }
+            animator.SetFloat("Clean", 1.0f);
+            isClean = true;
         }
     }
+
+    // private void OnTriggerStay(Collider other)
+    // {
+    //     if (other.gameObject == cleanerObject)
+    //     {
+    //         currentTime += Time.fixedDeltaTime;
+    //         currentTime = Mathf.Clamp(currentTime, 0, cleanTime);
+    //         float value = currentTime / cleanTime;
+
+    //         animator.SetFloat("Clean", value);
+
+    //         value = darkerAmount * Time.fixedDeltaTime;
+    //         Color currentColor = meshRendererController.meshRenderers[0].material.color;
+    //         meshRendererController.SetColors(new Color(
+    //             currentColor.r - value,
+    //             currentColor.g - value,
+    //             currentColor.b - value
+    //         ));
+
+    //         if (currentTime == cleanTime)
+    //         {
+    //             isClean = true;
+    //         }
+    //     }
+    // }
 }

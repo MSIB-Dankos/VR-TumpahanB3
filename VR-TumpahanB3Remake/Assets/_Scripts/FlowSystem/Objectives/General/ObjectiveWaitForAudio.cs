@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class ObjectiveWaitForAudio : FlowObjective
 {
     public VoiceLineQueue voiceLineQueue;
-    public int targetVoiceIndex;
+    [ValueDropdown(nameof(GetTargetVoices))] public int targetVoiceIndex;
 
     public override bool IsFlowComplete()
     {
@@ -20,5 +21,23 @@ public class ObjectiveWaitForAudio : FlowObjective
         }
 
         return true;
+    }
+
+    private ValueDropdownList<int> GetTargetVoices()
+    {
+#if UNITY_EDITOR
+        if (!voiceLineQueue)
+        {
+            return null;
+        }
+        ValueDropdownList<int> listVoice = new ValueDropdownList<int>();
+        for (int i = 0; i < voiceLineQueue.voiceQueue.Count; i++)
+        {
+            listVoice.Add(voiceLineQueue.voiceQueue[i].audioClip.name + " - " + i, i);
+        }
+        return listVoice;
+#else
+        return null;
+#endif
     }
 }
