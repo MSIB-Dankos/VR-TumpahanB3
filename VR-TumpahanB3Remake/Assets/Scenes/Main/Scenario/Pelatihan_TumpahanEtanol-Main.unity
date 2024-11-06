@@ -66223,6 +66223,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7884874084197050641, guid: be226bd024e366247b8a91db8d0589cb,
+        type: 3}
+      propertyPath: m_UpdateType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7884874084197050648, guid: be226bd024e366247b8a91db8d0589cb,
         type: 3}
       propertyPath: m_SlopeLimit
