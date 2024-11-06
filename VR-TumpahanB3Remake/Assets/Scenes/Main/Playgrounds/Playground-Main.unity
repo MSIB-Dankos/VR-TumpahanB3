@@ -1910,6 +1910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 1380218714}
   targetVoiceIndex: 4
+  filters: []
 --- !u!114 &263955130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3253,50 +3254,6 @@ Transform:
   - {fileID: 461693431}
   - {fileID: 194136933}
   m_Father: {fileID: 602226144}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &499589536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 499589538}
-  - component: {fileID: 499589537}
-  m_Layer: 0
-  m_Name: PKK Team Site
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &499589537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499589536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab439d0740c0d1e4595d998dbcc06c96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &499589538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499589536}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &505982375
 GameObject:
@@ -6024,6 +5981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 1380218714}
   targetVoiceIndex: 0
+  filters: []
 --- !u!114 &1019881076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10766,6 +10724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 1380218714}
   targetVoiceIndex: 3
+  filters: []
 --- !u!114 &1894819081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13573,4 +13532,3 @@ SceneRoots:
   - {fileID: 1922868115}
   - {fileID: 1380218713}
   - {fileID: 1460274676}
-  - {fileID: 499589538}
