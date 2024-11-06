@@ -20,14 +20,12 @@ public class SocketTelephoneFilter : FlowFilter
     {
         telephoneInteractable.selectEntered.AddListener(args =>
         {
-            if (args.interactableObject is XRDirectInteractor directInteractor)
+            if (!(args.interactorObject is XRDirectInteractor directInteractor))
             {
-                if (!telephoneInteractor.Contains(directInteractor))
-                {
-                    return;
-                }
+                return;
             }
-            else
+
+            if (!telephoneInteractor.Contains(directInteractor))
             {
                 return;
             }
@@ -38,6 +36,7 @@ public class SocketTelephoneFilter : FlowFilter
                 if (attentionRoutine != null)
                 {
                     StopCoroutine(attentionRoutine);
+                    interupterVoiceLine.audioSource.Play();
                     attentionRoutine = null;
                     audioSource.Stop();
                 }
@@ -45,18 +44,16 @@ public class SocketTelephoneFilter : FlowFilter
         });
         telephoneInteractable.selectExited.AddListener(args =>
         {
-            if (args.interactableObject is XRDirectInteractor directInteractor)
-            {
-                if (!telephoneInteractor.Contains(directInteractor))
-                {
-                    return;
-                }
-            }
-            else
+            if (!(args.interactorObject is XRDirectInteractor directInteractor))
             {
                 return;
             }
-            
+
+            if (!telephoneInteractor.Contains(directInteractor))
+            {
+                return;
+            }
+
             isSelected = false;
             if (isTelephoneFlow)
             {
@@ -65,6 +62,7 @@ public class SocketTelephoneFilter : FlowFilter
                     StopCoroutine(attentionRoutine);
                 }
                 attentionRoutine = StartCoroutine(GetTelephoneRoutine());
+                interupterVoiceLine.audioSource.Stop();
             }
         });
     }
