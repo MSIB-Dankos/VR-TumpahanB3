@@ -12,7 +12,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     public Renderer leftGlove, rightGlove;
     public Renderer leftHand, rightHand;
     public Material gloveMaterial, defaultMaterial;
-    public BoxCollider colliderGlove, colliderUsed;
     public Transform centerHandFollow;
     [field: SerializeField] public bool canProcess { get; set; }
 
@@ -41,9 +40,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
             followTransform.target = null;
 
-            colliderGlove.enabled = true;
-            colliderUsed.enabled = false;
-
             gloveMode = false;
         }
         else
@@ -55,9 +51,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
             leftHand.material = gloveMaterial;
 
             followTransform.target = centerHandFollow;
-            
-            colliderGlove.enabled = false;
-            colliderUsed.enabled = true;
 
             gloveMode = true;
         }
