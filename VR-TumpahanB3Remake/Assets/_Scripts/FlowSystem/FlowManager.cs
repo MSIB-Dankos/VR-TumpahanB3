@@ -8,6 +8,7 @@ public class FlowManager : MonoBehaviour
     [System.Serializable]
     public class Flow
     {
+        public bool enable = true;
         [Required] public FlowObjective flowObjective;
         public EventBus eventBus;
         [HideIf("@this.eventBus == null")] public string eventBeforeFlow = "OnStartFlow";
@@ -30,7 +31,7 @@ public class FlowManager : MonoBehaviour
     {
         if (currentFlow != -1)
         {
-            if (flowList[currentFlow].flowObjective.IsFlowComplete())
+            if (flowList[currentFlow].flowObjective.IsFlowComplete() || !flowList[currentFlow].enable)
             {
                 SetFlow(currentFlow + 1 >= flowList.Count ? -1 : currentFlow + 1);
             }
@@ -41,7 +42,7 @@ public class FlowManager : MonoBehaviour
     {
         if (currentFlow != -1)
         {
-            RunCurrentEventBusFlow(flowList[currentFlow].eventAfterFlow);
+            if (flowList[currentFlow].enable) RunCurrentEventBusFlow(flowList[currentFlow].eventAfterFlow);
         }
         if (index == -1)
         {
@@ -49,7 +50,7 @@ public class FlowManager : MonoBehaviour
             return;
         }
         currentFlow = index;
-        RunCurrentEventBusFlow(flowList[currentFlow].eventBeforeFlow);
+        if (flowList[currentFlow].enable) RunCurrentEventBusFlow(flowList[currentFlow].eventBeforeFlow);
     }
 
     private void RunCurrentEventBusFlow(string actionName)
