@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectiveWaitAbsorb : FlowObjective
@@ -22,7 +23,11 @@ public class ObjectiveWaitAbsorb : FlowObjective
     public float darkerKainAmount = 1.0f;
     public float targetTimeInSecond;
     public List<AbsorbData> absorbDatas = new List<AbsorbData>();
+    public UnityEvent onSocketFilled;
+
     private bool isDone;
+    private int socketFill;
+
     private void Awake()
     {
         for (int i = 0; i < absorbDatas.Count; i++)
@@ -41,6 +46,11 @@ public class ObjectiveWaitAbsorb : FlowObjective
                     absorbData.currentKain = grabObj.GetComponent<MeshRendererController>();
                 }
                 absorbData.selectRoutine = StartCoroutine(SelectRoutine(absorbData));
+                socketFill++;
+                if (socketFill >= absorbDatas.Count)
+                {
+                    onSocketFilled?.Invoke();
+                }
             });
 
             absorbData.socketInteractorAllowedObject.selectExited.AddListener(args =>
@@ -50,6 +60,7 @@ public class ObjectiveWaitAbsorb : FlowObjective
                     StopCoroutine(absorbData.selectRoutine);
                     absorbData.selectRoutine = null;
                 }
+                socketFill--;
             });
         }
     }
