@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -9,6 +10,9 @@ public class BookOpen : MonoBehaviour
     public XRGrabInteractable xrGrabInteractable;
     public Animator animator;
     public float tresholdDistance = 1.0f;
+
+    public UnityEvent onCloseBook;
+    public UnityEvent onOpenBook;
 
     private Transform firstInteractor, secondInteractor;
 
@@ -48,6 +52,11 @@ public class BookOpen : MonoBehaviour
         {
             secondInteractor = args.interactorObject.transform;
         }
+
+        if (firstInteractor && secondInteractor)
+        {
+            onOpenBook?.Invoke();
+        }
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
@@ -60,6 +69,8 @@ public class BookOpen : MonoBehaviour
         {
             secondInteractor = null;
         }
+
+        onCloseBook?.Invoke();
     }
 
 }
