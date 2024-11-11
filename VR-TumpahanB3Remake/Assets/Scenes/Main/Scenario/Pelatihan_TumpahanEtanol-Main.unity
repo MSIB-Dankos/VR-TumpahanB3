@@ -1580,6 +1580,7 @@ MonoBehaviour:
   target: {fileID: 25195965}
   offsetHeight: 0.5
   updateTime: 0.25
+  minDistance: 0.5
 --- !u!120 &38954943
 LineRenderer:
   serializedVersion: 2
@@ -3339,6 +3340,7 @@ MonoBehaviour:
   target: {fileID: 1550415045}
   offsetHeight: 0.5
   updateTime: 0.25
+  minDistance: 0.5
 --- !u!120 &104603214
 LineRenderer:
   serializedVersion: 2
@@ -6886,6 +6888,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 14949210}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeIn
             m_BoolArgument: 0
           m_CallState: 2
   - eventName: OnEndFlow
@@ -21909,18 +21923,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 14949210}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
@@ -33121,6 +33123,7 @@ MonoBehaviour:
   target: {fileID: 1642715601}
   offsetHeight: 0.5
   updateTime: 0.25
+  minDistance: 0.5
 --- !u!120 &922009014
 LineRenderer:
   serializedVersion: 2
@@ -49613,7 +49616,7 @@ Transform:
   m_GameObject: {fileID: 1478783615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071064, z: -0, w: 0.70710725}
-  m_LocalPosition: {x: -7.7412443, y: 0.6560999, z: -2.5938268}
+  m_LocalPosition: {x: -8.4542465, y: 0.6459999, z: -0.53982717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50743,6 +50746,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1940146951}
+          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
+          m_MethodName: SetTarget
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 543450651970058308}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
@@ -50775,6 +50790,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1940146951}
+          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
+          m_MethodName: SetNoTarget
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -58137,7 +58164,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702361580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.571}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00047499998, y: 0.0004750001, z: 0.00047499992}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -58147,7 +58174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.18799967, y: 1.477}
+  m_AnchoredPosition: {x: 0, y: 1.477}
   m_SizeDelta: {x: 1926.4238, y: 782.2563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702361582
@@ -65037,6 +65064,10 @@ MonoBehaviour:
   pelatihanDataList:
   - pelatihanName: Mencari tumpahan dan mengidentifikasi jenis tumpahan
     voiceLinePelatihan: {fileID: 8300000, guid: 27333da016bd0524cb2c725eb1d085d3,
+      type: 3}
+    textUI: {fileID: 0}
+  - pelatihanName: Meletakan rambu peringatan
+    voiceLinePelatihan: {fileID: 8300000, guid: 3e5b4cd2464ca6f43b86361952deb19b,
       type: 3}
     textUI: {fileID: 0}
   - pelatihanName: Mencari dokumen MSDS
