@@ -32,22 +32,33 @@ public class ShowPathLine : MonoBehaviour
 #if UNITY_EDITOR
             updateTimeYield = new WaitForSeconds(updateTime);
 #endif
+            if (target == null)
+            {
+                pathRenderer.positionCount = 0;
+                yield return updateTimeYield;
+                continue;
+            }
+
             if (Vector3.Distance(transform.position, target.position) < minDistance)
             {
                 pathRenderer.positionCount = 0;
+                yield return updateTimeYield;
+                continue;
             }
-            else if (target != null && NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
+
+            if (NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
             {
                 pathRenderer.positionCount = path.corners.Length;
                 for (int i = 0; i < path.corners.Length; i++)
                 {
                     pathRenderer.SetPosition(i, path.corners[i] + Vector3.up * offsetHeight);
                 }
+
+                yield return updateTimeYield;
+                continue;
             }
-            else
-            {
-                pathRenderer.positionCount = 0;
-            }
+
+            pathRenderer.positionCount = 0;
             yield return updateTimeYield;
         }
     }
