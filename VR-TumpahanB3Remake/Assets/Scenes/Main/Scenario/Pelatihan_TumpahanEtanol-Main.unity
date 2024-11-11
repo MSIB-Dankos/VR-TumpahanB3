@@ -1106,7 +1106,7 @@ Transform:
   m_GameObject: {fileID: 25195964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.56, y: 0.066, z: 6.83}
+  m_LocalPosition: {x: 1.56, y: 0.13, z: 6.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7450,6 +7450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1521660384387644574, guid: 2a0f82f9d68990a42a74d77e7a08a929,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521660384387644574, guid: 2a0f82f9d68990a42a74d77e7a08a929,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -8710,7 +8715,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.514}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 500, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244026941
 MonoBehaviour:
@@ -15541,7 +15546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 18
+  targetVoiceIndex: 19
   filters:
   - {fileID: 961407123}
   - {fileID: 1010175018}
@@ -20468,7 +20473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 20
+  targetVoiceIndex: 21
   filters: []
 --- !u!114 &565040296
 MonoBehaviour:
@@ -21642,7 +21647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 19
+  targetVoiceIndex: 20
   filters:
   - {fileID: 961407123}
 --- !u!114 &602075407
@@ -30252,7 +30257,7 @@ Transform:
   m_GameObject: {fileID: 846984475}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000005790196, y: 0.7033948, z: -0.000000057298774, w: 0.71079946}
-  m_LocalPosition: {x: 1.46, y: 1.055609, z: 2.71}
+  m_LocalPosition: {x: 1.46, y: 1.1500001, z: 2.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32190,6 +32195,11 @@ MonoBehaviour:
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
+    flowObjective: {fileID: 1518895876}
+    eventBus: {fileID: 1518895875}
+    eventBeforeFlow: OnStartFlow
+    eventAfterFlow: OnEndFlow
+  - enable: 1
     flowObjective: {fileID: 192802708}
     eventBus: {fileID: 192802709}
     eventBeforeFlow: OnStartFlow
@@ -32222,6 +32232,7 @@ Transform:
   - {fileID: 1948680650}
   - {fileID: 678068197}
   - {fileID: 605845392}
+  - {fileID: 1518895874}
   - {fileID: 192802707}
   - {fileID: 1575507061}
   - {fileID: 1832217677}
@@ -33973,9 +33984,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 84a87df47ca64274db83d3153bac5141, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 5ecbee057cad47c439e4612e2d02ad80, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &951960842
 GameObject:
@@ -38509,7 +38520,7 @@ GameObject:
   - component: {fileID: 1118310380}
   - component: {fileID: 1118310383}
   m_Layer: 0
-  m_Name: Letakan Spill Kit dan Warning Sign
+  m_Name: Letakan Spill Kit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38544,18 +38555,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1702361583}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1311255997}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: SetTrigger
@@ -38580,31 +38579,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2150985630962845712}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 38954941}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 922009011}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -38620,18 +38595,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1702361583}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1311255997}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: SetTrigger
@@ -38656,31 +38619,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2150985630962845712}
-          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 38954941}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 922009011}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -38705,7 +38644,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1642715601}
   - {fileID: 25195965}
   m_Father: {fileID: 967299937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50706,6 +50644,159 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1517750433}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1518895873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518895874}
+  - component: {fileID: 1518895876}
+  - component: {fileID: 1518895875}
+  m_Layer: 0
+  m_Name: Letakan Warning Sign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518895874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518895873}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.17799997, y: 0.066, z: 5.184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1642715601}
+  m_Father: {fileID: 894525878}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1518895875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518895873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec58c6b4b451f66479249172380f033c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventMaps:
+  - eventName: OnStartFlow
+    eventAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2034450037}
+          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
+          m_MethodName: NextAudio
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1702361583}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeIn
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2150985630962845712}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 922009011}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: OnEndFlow
+    eventAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1702361583}
+          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FadeOut
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2150985630962845712}
+          m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 922009011}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1518895876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518895873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1b15e65d96fc44a9ceffa89855dc28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketInteractorAllowedObjects:
+  - {fileID: 1642715603}
 --- !u!1001 &1521715364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51729,7 +51820,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.514}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 500, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543000893
 MonoBehaviour:
@@ -55108,12 +55199,12 @@ Transform:
   m_GameObject: {fileID: 1642715600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17799997, y: 0.066, z: 5.184}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1702361581}
-  m_Father: {fileID: 1118310381}
+  m_Father: {fileID: 1518895874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1642715602
 BoxCollider:
@@ -61501,7 +61592,7 @@ Transform:
   m_GameObject: {fileID: 1808633160}
   serializedVersion: 2
   m_LocalRotation: {x: -7.001475e-10, y: 0.000000029802322, z: -0.70710677, w: 0.7071069}
-  m_LocalPosition: {x: 0, y: 0.256, z: 0}
+  m_LocalPosition: {x: 0, y: 0.328, z: 0}
   m_LocalScale: {x: 0.49999994, y: 0.49999994, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68872,6 +68963,8 @@ MonoBehaviour:
     canSkipped: 1
   - audioClip: {fileID: 8300000, guid: 272cd4f2fb5bda0449d43b8e280283f1, type: 3}
     canSkipped: 0
+  - audioClip: {fileID: 8300000, guid: a470bbd08633f2a40aa3e2bc90fe8637, type: 3}
+    canSkipped: 1
   - audioClip: {fileID: 8300000, guid: 9dfb349d7e7e2a94180986bdbfb98706, type: 3}
     canSkipped: 1
   - audioClip: {fileID: 8300000, guid: f9f9769b9295491438d79295b04903f3, type: 3}
@@ -72932,7 +73025,7 @@ PrefabInstance:
     - target: {fileID: 5982381920818925631, guid: ab6fb1bda4fb0a04eba3457aabc3feec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06661618
+      value: 0.090116024
       objectReference: {fileID: 0}
     - target: {fileID: 5982381920818925631, guid: ab6fb1bda4fb0a04eba3457aabc3feec,
         type: 3}
@@ -74689,7 +74782,7 @@ Transform:
   m_GameObject: {fileID: 1340472920827248760}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000057901953, y: 0.7033948, z: -0.00000005729877, w: 0.71079946}
-  m_LocalPosition: {x: 1.46, y: 1.0625, z: 2.71}
+  m_LocalPosition: {x: 1.46, y: 1.1568913, z: 2.71}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []

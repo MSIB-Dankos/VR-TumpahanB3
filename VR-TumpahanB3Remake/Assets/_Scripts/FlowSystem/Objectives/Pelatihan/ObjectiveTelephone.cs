@@ -48,7 +48,7 @@ public class ObjectiveTelephone : FlowObjective
                     numpadController.Clear();
                 }
                 
-                if (i % 2 == 0) audioSource.Stop();
+                if (i % 4 == 0) audioSource.Stop();
                 yield return textDotWait;
             }
             numpadController.Clear();
