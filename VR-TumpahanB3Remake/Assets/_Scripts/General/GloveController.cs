@@ -7,57 +7,72 @@ using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
 public class GloveController : MonoBehaviour, IXRSelectFilter
 {
-    public FollowTransform followTransform;
-    public XRGrabInteractable XRGrab;
-    public Renderer leftGlove, rightGlove;
-    public Renderer leftHand, rightHand;
-    public Material gloveMaterial, defaultMaterial;
-    public Transform centerHandFollow;
+    [Header("Filter")]
+    public List<XRBaseInteractor> allowedInteractor;
     [field: SerializeField] public bool canProcess { get; set; }
+    [field: SerializeField] public bool equipMode { get; set; }
 
-    [Header("Debug")]
-    [ShowInInspector, ReadOnly] private bool gloveMode;
+    [Header("Hand Settings")]
 
+    public FollowTransform followTransform;
+    public Renderer handRenderer;
+    public Material gloveMaterial, originalMaterial;
+    public Renderer gloveRenderer;
+    public BoxCollider boxCollider;
+
+    private bool gloveMode;
+    private XRBaseInteractable interactable;
     private void Awake()
     {
-        followTransform.target = null;
-        XRGrab.selectEntered.AddListener(OnSelect);
+        interactable = GetComponent<XRGrabInteractable>();
+        interactable.selectEntered.AddListener(OnSelect);
     }
 
     private void OnSelect(SelectEnterEventArgs args)
     {
-        if (args.interactorObject is SocketInteractorAllowedObject || args.interactableObject is XRSocketInteractor)
+        if (!equipMode)
         {
             return;
         }
+
+        boxCollider.enabled = true;
+
         if (gloveMode)
         {
-            leftGlove.enabled = true;
-            rightGlove.enabled = true;
-
-            rightHand.material = defaultMaterial;
-            leftHand.material = defaultMaterial;
-
-            followTransform.target = null;
+            followTransform.enabled = false;
+            handRenderer.material = originalMaterial;
+            gloveRenderer.enabled = true;
+            boxCollider.enabled = true;
 
             gloveMode = false;
+            equipMode = false;
         }
         else
         {
-            leftGlove.enabled = false;
-            rightGlove.enabled = false;
-
-            rightHand.material = gloveMaterial;
-            leftHand.material = gloveMaterial;
-
-            followTransform.target = centerHandFollow;
+            followTransform.enabled = true;
+            handRenderer.material = gloveMaterial;
+            gloveRenderer.enabled = false;
+            boxCollider.enabled = false;
 
             gloveMode = true;
+            equipMode = false;
         }
     }
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        return canProcess;
+        if (interactor is XRBaseInteractor inter)
+        {
+            if (allowedInteractor.Contains(inter))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void SetEquipMode()
+    {
+        equipMode = true;
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectiveGrabSocket : FlowObjective
 {
     public List<SocketInteractorAllowedObject> socketInteractorAllowedObjects;
+    public List<FlowFilter> filters;
 
     [Header("Debug")]
     [ShowInInspector, ReadOnly] private int socketFilledCount = 0;
@@ -41,6 +42,23 @@ public class ObjectiveGrabSocket : FlowObjective
 
     public override bool IsFlowComplete()
     {
+        if (filters.Count > 1)
+        {
+            foreach (FlowFilter flowFilter in filters)
+            {
+                if (!flowFilter.GetFilter())
+                {
+                    return false;
+                }
+            }
+        }
+        else if (filters.Count > 0)
+        {
+            if (!filters[0].GetFilter())
+            {
+                return false;
+            }
+        }
         return socketFilledCount >= socketInteractorAllowedObjects.Count;
     }
 }
