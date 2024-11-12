@@ -35,8 +35,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
             return;
         }
 
-        boxCollider.enabled = true;
-
         if (gloveMode)
         {
             followTransform.enabled = false;
@@ -74,5 +72,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     public void SetEquipMode()
     {
         equipMode = true;
+        boxCollider.enabled = true;
     }
 }
