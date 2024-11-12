@@ -6256,6 +6256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedInteractor:
   - {fileID: 1281559140}
+  - {fileID: 584949202}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 164396166}
@@ -14830,6 +14831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedInteractor:
   - {fileID: 733155217}
+  - {fileID: 2068581596}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 414631366}
@@ -34756,7 +34758,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.083333336
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5ecbee057cad47c439e4612e2d02ad80, type: 2}
   m_BuildHeightMesh: 0
