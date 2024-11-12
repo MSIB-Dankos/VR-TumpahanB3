@@ -74,4 +74,9 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
         equipMode = true;
         boxCollider.enabled = true;
     }
+
+    public bool IsGloveMode()
+    {
+        return gloveMode;
+    }
 }
