@@ -6259,7 +6259,7 @@ MonoBehaviour:
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 164396166}
-  handRenderer: {fileID: 1940146949}
+  handRenderer: {fileID: 1940146950}
   gloveMaterial: {fileID: 2100000, guid: d930b3df93a53784abe68ec886839d31, type: 2}
   originalMaterial: {fileID: 2100000, guid: 3637b758ff163493f8bb8b6d7e96d7ae, type: 2}
   gloveRenderer: {fileID: 164396171}
