@@ -8,7 +8,7 @@ public class SelectedFilter : FlowFilter
 {
     public List<XRBaseInteractable> interactableSelection = new List<XRBaseInteractable>();
 
-    private HashSet<XRBaseInteractable> interactableSelected;
+    private HashSet<XRBaseInteractable> interactableSelected = new HashSet<XRBaseInteractable>();
     private void Awake()
     {
         foreach (XRBaseInteractable interactableSelected in interactableSelection)
