@@ -15910,6 +15910,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 526172196}
+    - targetCorrespondingSourceObject: {fileID: -7681694574020678513, guid: b77704644751d914798c823e0c7056af,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1042776360}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7437956036579701451, guid: b77704644751d914798c823e0c7056af,
         type: 3}
@@ -16063,7 +16067,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1042776360}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -36952,6 +36956,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1033242231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1042776359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042776360}
+  m_Layer: 0
+  m_Name: Attach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042776360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042776359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000014901161, y: -0.000000026077032, z: -1, w: -0.000000029802322}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 998761748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!1 &1043685738
 GameObject:
   m_ObjectHideFlags: 0
@@ -66845,8 +66880,12 @@ MonoBehaviour:
     voiceLinePelatihan: {fileID: 8300000, guid: 69adf413896b0184e842a51054cc9e1c,
       type: 3}
     textUI: {fileID: 0}
-  - pelatihanName: Meletakan spill kit dan warning sign
-    voiceLinePelatihan: {fileID: 8300000, guid: 544370a635df6cf408752485eb926717,
+  - pelatihanName: Mengambil dan meletakan spill kit
+    voiceLinePelatihan: {fileID: 8300000, guid: 84a7ff84e3a9b7d40ad634656007b145,
+      type: 3}
+    textUI: {fileID: 0}
+  - pelatihanName: Meletakan jerigen ke tempat sampah B3
+    voiceLinePelatihan: {fileID: 8300000, guid: cf7996f32d539bc448fe3c8f1a815f4f,
       type: 3}
     textUI: {fileID: 0}
   - pelatihanName: Pembersihan tumpahan dengan adsorbent dan kain bebas serat
@@ -71050,7 +71089,7 @@ MonoBehaviour:
     canSkipped: 1
   - audioClip: {fileID: 8300000, guid: ea999f3aff55fff4b87583a977ab47e1, type: 3}
     canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 31e9434bf815e94449fffef41bd37b83, type: 3}
+  - audioClip: {fileID: 8300000, guid: 3b0cb389c671c6347ac989743446b3e0, type: 3}
     canSkipped: 1
   - audioClip: {fileID: 8300000, guid: 0a5ba238977e3b2459f99f12fdf7655a, type: 3}
     canSkipped: 1
