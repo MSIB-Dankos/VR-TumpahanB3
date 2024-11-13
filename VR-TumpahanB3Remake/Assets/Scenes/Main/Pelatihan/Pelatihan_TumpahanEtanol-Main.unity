@@ -4422,6 +4422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numpadController: {fileID: 1521715368}
   audioSource: {fileID: 1521715365}
+  callSequenceTime: 1.5
+  callSequenceStop: 1
   onFailed:
     m_PersistentCalls:
       m_Calls:
@@ -27163,7 +27165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.181, y: 1.568}
+  m_AnchoredPosition: {x: -0.181, y: 1.818}
   m_SizeDelta: {x: 1926.4238, y: 782.2563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &725761613
@@ -46246,7 +46248,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311255994}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.0000014603136}
-  m_LocalPosition: {x: 0, y: 0, z: -4.389}
+  m_LocalPosition: {x: 0, y: 0, z: -4.145}
   m_LocalScale: {x: 0.00047499998, y: 0.0004750001, z: 0.00047499992}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -46256,7 +46258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.10099995, y: 1.502}
+  m_AnchoredPosition: {x: -0.11, y: 1.7}
   m_SizeDelta: {x: 1926.4238, y: 782.2563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311255996
