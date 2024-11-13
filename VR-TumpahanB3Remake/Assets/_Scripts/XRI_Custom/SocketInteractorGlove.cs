@@ -15,7 +15,7 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
             {
                 if (!grabInteractable.IsGloveMode())
                 {
-                    return base.CanHover(interactable);
+                    return base.BaseCanHover(interactable);
                 }
             }
         }
@@ -30,7 +30,7 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
             {
                 if (!grabInteractable.IsGloveMode())
                 {
-                    return base.CanHoverSnap(interactable);
+                    return base.BaseCanHoverSnap(interactable);
                 }
             }
         }
@@ -45,7 +45,7 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
             {
                 if (!grabInteractable.IsGloveMode())
                 {
-                    return base.CanSelect(interactable);
+                    return base.BaseCanSelect(interactable);
                 }
             }
         }

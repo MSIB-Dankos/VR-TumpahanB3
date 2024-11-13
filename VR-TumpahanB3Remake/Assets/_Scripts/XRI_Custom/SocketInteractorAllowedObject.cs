@@ -40,4 +40,19 @@ public class SocketInteractorAllowedObject : XRSocketInteractor
         }
         return false;
     }
+
+    protected bool BaseCanHover(IXRHoverInteractable interactable)
+    {
+        return base.CanHover(interactable);
+    }
+
+    protected bool BaseCanHoverSnap(IXRInteractable interactable)
+    {
+        return base.CanHoverSnap(interactable);
+    }
+
+    protected bool BaseCanSelect(IXRSelectInteractable interactable)
+    {
+        return base.CanSelect(interactable);
+    }
 }
