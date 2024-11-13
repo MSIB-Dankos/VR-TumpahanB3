@@ -9,11 +9,11 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
 
     public override bool CanHover(IXRHoverInteractable interactable)
     {
-        if (interactable is GloveController grabInteractable)
+        if (interactable.transform.TryGetComponent(out GloveController gloveController))
         {
-            if (gloveControllers.Contains(grabInteractable))
+            if (gloveControllers.Contains(gloveController))
             {
-                if (!grabInteractable.IsGloveMode())
+                if (!gloveController.IsGloveMode())
                 {
                     return base.BaseCanHover(interactable);
                 }
@@ -24,11 +24,11 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
 
     protected override bool CanHoverSnap(IXRInteractable interactable)
     {
-        if (interactable is GloveController grabInteractable)
+        if (interactable.transform.TryGetComponent(out GloveController gloveController))
         {
-            if (gloveControllers.Contains(grabInteractable))
+            if (gloveControllers.Contains(gloveController))
             {
-                if (!grabInteractable.IsGloveMode())
+                if (!gloveController.IsGloveMode())
                 {
                     return base.BaseCanHoverSnap(interactable);
                 }
@@ -39,11 +39,11 @@ public class SocketInteractorGlove : SocketInteractorAllowedObject //lmaooo
 
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
-        if (interactable is GloveController grabInteractable)
+        if (interactable.transform.TryGetComponent(out GloveController gloveController))
         {
-            if (gloveControllers.Contains(grabInteractable))
+            if (gloveControllers.Contains(gloveController))
             {
-                if (!grabInteractable.IsGloveMode())
+                if (!gloveController.IsGloveMode())
                 {
                     return base.BaseCanSelect(interactable);
                 }
