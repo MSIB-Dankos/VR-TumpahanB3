@@ -21625,9 +21625,12 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  allowedInteractables: []
+  allowedInteractables:
+  - {fileID: 164396167}
+  - {fileID: 414631367}
   gloveControllers:
   - {fileID: 164396168}
+  - {fileID: 414631363}
 --- !u!1001 &585687863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72765,8 +72768,11 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  allowedInteractables: []
+  allowedInteractables:
+  - {fileID: 164396167}
+  - {fileID: 414631367}
   gloveControllers:
+  - {fileID: 164396168}
   - {fileID: 414631363}
 --- !u!1001 &2072806800
 PrefabInstance:
