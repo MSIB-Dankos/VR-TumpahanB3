@@ -16,17 +16,18 @@ public class ActiveAfterVoiceLine : MonoBehaviour
 
     private IEnumerator UpdateRoutine()
     {
+        WaitForSeconds timeUpdate = new WaitForSeconds(0.1f);
         while (true)
         {
             if (targetVoiceIndex != voiceLineQueue.GetCurrentAudioIndex())
             {
-                yield return null;
+                yield return timeUpdate;
                 continue;
             }
 
             if (voiceLineQueue.audioSource.isPlaying)
             {
-                yield return null;
+                yield return timeUpdate;
                 continue;
             }
 

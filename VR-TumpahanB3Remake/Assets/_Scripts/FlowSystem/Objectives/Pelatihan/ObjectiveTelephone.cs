@@ -10,8 +10,6 @@ public class ObjectiveTelephone : FlowObjective
 
     [Header("Audio")]
     public AudioSource audioSource;
-    public float callSequenceTime = 1.0f;
-    public float callSequenceStop = 1.0f;
 
     [Header("Events")]
     public UnityEvent onFailed;
@@ -33,20 +31,6 @@ public class ObjectiveTelephone : FlowObjective
     private void OnCall(string number)
     {
         StartCoroutine(CallTextAnimateRoutine());
-        StartCoroutine(CallAudio());
-
-        IEnumerator CallAudio()
-        {
-            WaitForSeconds sequenceTime = new WaitForSeconds(callSequenceTime);
-            WaitForSeconds sequenceStop = new WaitForSeconds(callSequenceStop);
-            while (true)
-            {
-                audioSource.Play();
-                yield return sequenceTime;
-                audioSource.Stop();
-                yield return sequenceStop;
-            }
-        }
 
         IEnumerator CallTextAnimateRoutine()
         {
@@ -54,17 +38,17 @@ public class ObjectiveTelephone : FlowObjective
             numpadController.Disable();
 
             WaitForSeconds textDotWait = new WaitForSeconds(0.25f);
-
-            for (int i = 0; i < 10; i++)
+            
+            for (int i = 0; i < 16; i++)
             {
-                //if (!audioSource.isPlaying) audioSource.Play();
+                if (!audioSource.isPlaying && i % 4 == 0) audioSource.Play();
                 numpadController.AddNumber(".");
                 if (i % 3 == 0)
                 {
                     numpadController.Clear();
                 }
 
-                //if (i % 4 == 0) audioSource.Stop();
+                if (i % 8 == 0) audioSource.Stop();
                 yield return textDotWait;
             }
             numpadController.Clear();
@@ -77,8 +61,6 @@ public class ObjectiveTelephone : FlowObjective
 
             numpadController.Enable();
             audioSource.Stop();
-
-            StopCoroutine(CallAudio());
         }
     }
 
