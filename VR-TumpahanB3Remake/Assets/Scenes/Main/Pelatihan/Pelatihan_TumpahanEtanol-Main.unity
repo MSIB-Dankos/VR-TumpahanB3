@@ -6421,6 +6421,8 @@ MonoBehaviour:
   allowedInteractor:
   - {fileID: 1281559140}
   - {fileID: 584949202}
+  allowedInteractorWhenGloveMode:
+  - {fileID: 733155217}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 164396166}
@@ -15363,6 +15365,8 @@ MonoBehaviour:
   allowedInteractor:
   - {fileID: 733155217}
   - {fileID: 2068581596}
+  allowedInteractorWhenGloveMode:
+  - {fileID: 1281559140}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 414631366}

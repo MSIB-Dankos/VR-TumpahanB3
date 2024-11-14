@@ -9,6 +9,7 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 {
     [Header("Filter")]
     public List<XRBaseInteractor> allowedInteractor;
+    public List<XRBaseInteractor> allowedInteractorWhenGloveMode;
     [field: SerializeField] public bool canProcess { get; set; }
     [field: SerializeField] public bool equipMode { get; set; }
 
@@ -59,11 +60,24 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        if (interactor is XRBaseInteractor inter)
+        if (gloveMode)
         {
-            if (allowedInteractor.Contains(inter))
+            if (interactor is XRBaseInteractor inter)
             {
-                return true;
+                if (allowedInteractorWhenGloveMode.Contains(inter))
+                {
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            if (interactor is XRBaseInteractor inter)
+            {
+                if (allowedInteractor.Contains(inter))
+                {
+                    return true;
+                }
             }
         }
         return false;
