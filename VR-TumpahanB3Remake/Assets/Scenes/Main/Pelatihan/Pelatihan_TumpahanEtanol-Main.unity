@@ -2213,6 +2213,11 @@ MonoBehaviour:
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
+    flowObjective: {fileID: 657875557}
+    eventBus: {fileID: 657875556}
+    eventBeforeFlow: OnStartFlow
+    eventAfterFlow: OnEndFlow
+  - enable: 1
     flowObjective: {fileID: 602075406}
     eventBus: {fileID: 602075407}
     eventBeforeFlow: OnStartFlow
@@ -24376,6 +24381,7 @@ GameObject:
   - component: {fileID: 657875555}
   - component: {fileID: 657875557}
   - component: {fileID: 657875556}
+  - component: {fileID: 657875558}
   m_Layer: 0
   m_Name: Laporkan Kejadian
   m_TagString: Untagged
@@ -24496,6 +24502,22 @@ MonoBehaviour:
   filters:
   - {fileID: 961407123}
   - {fileID: 1890059135}
+--- !u!114 &657875558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657875554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d6f48540fc3a74b95bb7ed67c97c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitAfter: 15
+  activatedObejcts:
+  - {fileID: 218493101}
+  eventBeforeFlow: OnStartFlow
 --- !u!1001 &657925974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71122,54 +71144,6 @@ Transform:
   - {fileID: 1288304854}
   m_Father: {fileID: 544619333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2016750743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016750744}
-  - component: {fileID: 2016750745}
-  m_Layer: 0
-  m_Name: Active Button Next - Laporkan Kejadian
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2016750744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016750743}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2034450035}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2016750745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016750743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24db0966f6b0da047b7f09aeafc4e650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateGameObjects:
-  - {fileID: 218493101}
-  voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 21
 --- !u!1 &2018786293
 GameObject:
   m_ObjectHideFlags: 0
@@ -72227,7 +72201,6 @@ Transform:
   m_Children:
   - {fileID: 1571600060}
   - {fileID: 1632772635}
-  - {fileID: 2016750744}
   m_Father: {fileID: 519410620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2034450036
