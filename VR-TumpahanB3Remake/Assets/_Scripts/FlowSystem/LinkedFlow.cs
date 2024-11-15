@@ -8,7 +8,7 @@ public class LinkedFlow : MonoBehaviour
     [InfoBox("Flow akan dikaitkan dengan menjalankannya secara berurutan, Flow Manager dijalankan dari atas ke bawah", InfoMessageType.Info)]
     public List<FlowManager> flowManagerList = new List<FlowManager>();
 
-    private int currentActive = 0;
+    [ShowInInspector, ReadOnly] private int currentActive = 0;
 
     private void Awake()
     {
@@ -18,8 +18,19 @@ public class LinkedFlow : MonoBehaviour
             flowManager.enabled = false;
             if (flowManager.flowList.Count > 0)
             {
-                FlowManager.Flow lastFlow = flowManager.flowList[flowManager.flowList.Count - 1];
-                lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
+                for (int j = 1; j == flowManager.flowList.Count; j++)
+                {
+                    FlowManager.Flow lastFlow = flowManager.flowList[flowManager.flowList.Count - i];
+                    if (lastFlow.enable)
+                    {
+                        lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
             }
         }
         flowManagerList[currentActive].enabled = true;
