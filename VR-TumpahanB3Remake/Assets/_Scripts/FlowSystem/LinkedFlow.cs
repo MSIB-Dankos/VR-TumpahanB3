@@ -13,37 +13,36 @@ public class LinkedFlow : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < flowManagerList.Count; i++)
+        if (flowManagerList.Count > 0)
         {
-            FlowManager flowManager = flowManagerList[i];
-            flowManager.enabled = false;
-            if (flowManager.flowList.Count > 0)
+            for (int i = 0; i < flowManagerList.Count; i++)
             {
-                FlowManager.Flow lastFlow = GetLastFlowEnabled(flowManager);
-                if (lastFlow != null)
+                FlowManager flowManager = flowManagerList[i];
+                flowManager.enabled = false;
+                if (flowManager.flowList.Count > 0)
                 {
-                    lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
+                    FlowManager.Flow lastFlow = GetLastFlowEnabled(flowManager);
+                    if (lastFlow != null)
+                    {
+                        lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
+                    }
                 }
             }
+
+            flowManagerList[currentActive].enabled = true;
         }
-        flowManagerList[currentActive].enabled = true;
     }
 
     private FlowManager.Flow GetLastFlowEnabled(FlowManager flowManager)
     {
-        for (int i = 1; i == flowManager.flowList.Count; i++)
+        for (int i = 1; i <= flowManager.flowList.Count; i++) // Corrected condition
         {
             FlowManager.Flow lastFlow = flowManager.flowList[flowManager.flowList.Count - i];
             if (lastFlow.enable)
             {
                 return lastFlow;
             }
-            else
-            {
-                continue;
-            }
         }
-
         return null;
     }
 
@@ -51,10 +50,12 @@ public class LinkedFlow : MonoBehaviour
     {
         flowManagerList[currentActive].enabled = false;
         currentActive++;
-        if (currentActive > flowManagerList.Count)
+
+        if (currentActive >= flowManagerList.Count) // Corrected condition
         {
             return;
         }
+
         flowManagerList[currentActive].enabled = true;
     }
 }
