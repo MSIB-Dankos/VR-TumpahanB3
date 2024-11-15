@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -20,20 +21,33 @@ public class LinkedFlow : MonoBehaviour
             {
                 for (int j = 1; j == flowManager.flowList.Count; j++)
                 {
-                    FlowManager.Flow lastFlow = flowManager.flowList[flowManager.flowList.Count - i];
-                    if (lastFlow.enable)
+                    FlowManager.Flow lastFlow = GetLastFlowEnabled(flowManager);//flowManager.flowList.OrderByDescending(x => x.enable).ToArray()[0];//[flowManager.flowList.Count - i];
+                    if (lastFlow != null)
                     {
                         lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
-                        break;
-                    }
-                    else
-                    {
-                        continue;
                     }
                 }
             }
         }
         flowManagerList[currentActive].enabled = true;
+    }
+
+    private FlowManager.Flow GetLastFlowEnabled(FlowManager flowManager)
+    {
+        for (int i = 1; i == flowManager.flowList.Count; i++)
+        {
+            FlowManager.Flow lastFlow = flowManager.flowList[flowManager.flowList.Count - i];
+            if (lastFlow.enable)
+            {
+                return lastFlow;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        return null;
     }
 
     private void NextFlowManager()
