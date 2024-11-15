@@ -19,13 +19,10 @@ public class LinkedFlow : MonoBehaviour
             flowManager.enabled = false;
             if (flowManager.flowList.Count > 0)
             {
-                for (int j = 1; j == flowManager.flowList.Count; j++)
+                FlowManager.Flow lastFlow = GetLastFlowEnabled(flowManager);
+                if (lastFlow != null)
                 {
-                    FlowManager.Flow lastFlow = GetLastFlowEnabled(flowManager);//flowManager.flowList.OrderByDescending(x => x.enable).ToArray()[0];//[flowManager.flowList.Count - i];
-                    if (lastFlow != null)
-                    {
-                        lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
-                    }
+                    lastFlow.eventBus.AddListener(lastFlow.eventAfterFlow, NextFlowManager);
                 }
             }
         }
