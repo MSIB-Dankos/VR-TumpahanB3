@@ -8,6 +8,7 @@ public class ObjectiveQuestion : FlowObjective
 {
     public List<Button> wrongAnswerButtons;
     public List<Button> rightAnswerButtons;
+    public bool isAssesmen;
 
     public UnityEvent onWrongAnswer;
 
@@ -27,6 +28,11 @@ public class ObjectiveQuestion : FlowObjective
 
     private void OnWrongAnswer()
     {
+        if (isAssesmen)
+        {
+            isDone = true;
+            return;
+        }
         onWrongAnswer?.Invoke();
     }
 

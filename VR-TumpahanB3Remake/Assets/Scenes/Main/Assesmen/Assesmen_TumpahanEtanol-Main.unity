@@ -2208,12 +2208,12 @@ MonoBehaviour:
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
-    flowObjective: {fileID: 449060426}
+    flowObjective: {fileID: 0}
     eventBus: {fileID: 449060427}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
-    flowObjective: {fileID: 657875557}
+    flowObjective: {fileID: 0}
     eventBus: {fileID: 657875556}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
@@ -4606,71 +4606,11 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 954595629}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetTarget
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 979346108}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 954595629}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetNoTarget
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &121903190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7182,71 +7122,11 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 14949210}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetTarget
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1778009769}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 14949210}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetNoTarget
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &192802710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10433,19 +10313,7 @@ MonoBehaviour:
     currentKain: {fileID: 0}
   onSocketFilled:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 631308864}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &268176813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10463,30 +10331,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 330574762}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1750627460}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -10503,18 +10347,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 330574762}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1750627460}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -12207,31 +12039,7 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1885172779}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
@@ -16433,8 +16241,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449060425}
-  - component: {fileID: 449060426}
+  - component: {fileID: 449060429}
   - component: {fileID: 449060427}
+  - component: {fileID: 449060428}
   m_Layer: 0
   m_Name: Terhubung Laporan
   m_TagString: Untagged
@@ -16458,23 +16267,6 @@ Transform:
   - {fileID: 1071182063}
   m_Father: {fileID: 46117761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &449060426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449060424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445cb73b8b9ba54499a8f9d7d6f93432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 20
-  filters:
-  - {fileID: 961407123}
-  - {fileID: 1010175018}
 --- !u!114 &449060427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16492,18 +16284,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1071182065}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: SetTrigger
@@ -16568,6 +16348,37 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &449060428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449060424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d6f48540fc3a74b95bb7ed67c97c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitAfter: 5
+  activatedObejcts:
+  - {fileID: 1234991338}
+  eventBeforeFlow: OnStartFlow
+--- !u!114 &449060429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449060424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3635ac9126674a8bcda3651d4da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButton: {fileID: 1234991340}
+  filters:
+  - {fileID: 961407123}
 --- !u!1001 &453842981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21309,7 +21120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 23
+  targetVoiceIndex: 2
   filters: []
 --- !u!114 &565040296
 MonoBehaviour:
@@ -22631,7 +22442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineQueue: {fileID: 2034450037}
-  targetVoiceIndex: 22
+  targetVoiceIndex: 1
   filters:
   - {fileID: 961407123}
 --- !u!114 &602075407
@@ -24383,7 +24194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657875555}
-  - component: {fileID: 657875557}
+  - component: {fileID: 657875559}
   - component: {fileID: 657875556}
   - component: {fileID: 657875558}
   m_Layer: 0
@@ -24426,18 +24237,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 227115952}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: SetTrigger
@@ -24490,22 +24289,6 @@ MonoBehaviour:
             m_StringArgument: FadeOut
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &657875557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657875554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f41057d34a5f344c85b19e530d22092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 15
-  filters:
-  - {fileID: 961407123}
-  - {fileID: 1890059135}
 --- !u!114 &657875558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24518,10 +24301,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d6f48540fc3a74b95bb7ed67c97c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitAfter: 15
+  waitAfter: 5
   activatedObejcts:
   - {fileID: 218493101}
   eventBeforeFlow: OnStartFlow
+--- !u!114 &657875559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657875554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3635ac9126674a8bcda3651d4da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressButton: {fileID: 218493103}
+  filters: []
 --- !u!1001 &657925974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24998,33 +24795,10 @@ MonoBehaviour:
   - {fileID: 1646037484}
   rightAnswerButtons:
   - {fileID: 2143400814}
+  isAssesmen: 1
   onWrongAnswer:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 573661507}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2034450036}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &678068199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25066,18 +24840,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
@@ -25098,18 +24860,6 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
           m_MethodName: set_blocksRaycasts
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 573661507}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Stop
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -33662,7 +33412,7 @@ MonoBehaviour:
     eventBus: {fileID: 1616413253}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - enable: 1
+  - enable: 0
     flowObjective: {fileID: 1924230703}
     eventBus: {fileID: 1924230702}
     eventBeforeFlow: OnStartFlow
@@ -33677,7 +33427,7 @@ MonoBehaviour:
     eventBus: {fileID: 678068199}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - enable: 1
+  - enable: 0
     flowObjective: {fileID: 605845394}
     eventBus: {fileID: 605845393}
     eventBeforeFlow: OnStartFlow
@@ -33697,7 +33447,7 @@ MonoBehaviour:
     eventBus: {fileID: 1575507060}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - enable: 1
+  - enable: 0
     flowObjective: {fileID: 1832217678}
     eventBus: {fileID: 1832217676}
     eventBeforeFlow: OnStartFlow
@@ -36019,6 +35769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1838da8fa093924aa28d4ffab0fe04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAssesmen: 0
   telephoneInteractor:
   - {fileID: 733155217}
   - {fileID: 1281559140}
@@ -38571,30 +38322,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 696096924}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1249870149}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -38671,18 +38398,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 696096924}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 708366334}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -40212,30 +39927,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1311255997}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 807784495052519973}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -40264,18 +39955,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1311255997}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 807784495052519973}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -43607,30 +43286,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 219312557}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1707289370}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -43647,18 +43302,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 219312557}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1707289370}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -44506,7 +44149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sebutkan nama, bagian, dan jelaskan apa yang terjadi!
+  m_text: Sebutkan nama, berasal dari bagian mana dan jelaskan tumpahan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -44533,7 +44176,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 130.8
+  m_fontSize: 128.85
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -44806,30 +44449,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1180507900}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 793171270}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -44858,18 +44477,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1180507900}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 793171270}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -45611,30 +45218,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 903866491}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1707289370}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -45651,18 +45234,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 903866491}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1707289370}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -51394,18 +50965,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 899129835}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 453875017}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -52367,30 +51926,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1080511166}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 104603211}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -52419,18 +51954,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1080511166}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 104603211}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -52979,30 +52502,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1702361583}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 2150985630962845712}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -53022,18 +52521,6 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetTarget
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 543450651970058308}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -53043,18 +52530,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1702361583}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 2150985630962845712}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -53071,18 +52546,6 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1940146951}
-          m_TargetAssemblyTypeName: ShowPathLine, Assembly-CSharp
-          m_MethodName: SetNoTarget
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -54651,30 +54114,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 725761614}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 414631363}
           m_TargetAssemblyTypeName: GloveController, Assembly-CSharp
           m_MethodName: SetEquipMode
@@ -54702,43 +54141,7 @@ MonoBehaviour:
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 725761614}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1766289184}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 373253252}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1558092079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55621,47 +55024,11 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1885172779}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1885172779}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!4 &1575507061
 Transform:
   m_ObjectHideFlags: 0
@@ -63400,30 +62767,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 899129835}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 793171267}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
@@ -65594,43 +64937,7 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1766289184}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 373253252}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
@@ -68790,18 +68097,6 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 206272148}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
@@ -68826,34 +68121,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1225643624}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 1
-          m_CallState: 2
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1225643624}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1943295346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69081,47 +68352,11 @@ MonoBehaviour:
   - eventName: OnStartFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 900627884}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeIn
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2034450037}
-          m_TargetAssemblyTypeName: VoiceLineQueue, Assembly-CSharp
-          m_MethodName: NextAudio
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventName: OnEndFlow
     eventAction:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 900627884}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: SetTrigger
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: FadeOut
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1948680653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72317,48 +71552,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceQueue:
   - audioClip: {fileID: 8300000, guid: 9df28a0bc800a4547ac0573cfd741c67, type: 3}
-    canSkipped: 0
-  - audioClip: {fileID: 8300000, guid: 18af5447bb5f7b74a9b3d0a4304a9a7f, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 1aab5d8844bd8ac4faf3415b1ff8189f, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 272cd4f2fb5bda0449d43b8e280283f1, type: 3}
-    canSkipped: 0
-  - audioClip: {fileID: 8300000, guid: a470bbd08633f2a40aa3e2bc90fe8637, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 9dfb349d7e7e2a94180986bdbfb98706, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: f9f9769b9295491438d79295b04903f3, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 8e81230dca051524985abb6e738031b7, type: 3}
-    canSkipped: 0
-  - audioClip: {fileID: 8300000, guid: bad76c421ea615e468d72034ee485322, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: ea999f3aff55fff4b87583a977ab47e1, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 3b0cb389c671c6347ac989743446b3e0, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 0a5ba238977e3b2459f99f12fdf7655a, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: d3f80f5593269a348be1de36be6a5958, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 0683b3de1800e9b448abdfa73f8b69dc, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 74a2364b48b84764b88e3843ca3e7a0d, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: fb55549f1e7b9764bb6290d77bebb3f2, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 5c297ac2012cd4145862f359932e01a4, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 3ed7b790643ebbf48b0dfb58765b4bd5, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: c328ba7396f14814d8825913c5fc5f17, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: fc50cada43c8e7d4e926aa118616e519, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: 005c1c7cd130f9041bef25caeafa3e19, type: 3}
-    canSkipped: 1
-  - audioClip: {fileID: 8300000, guid: b31c189142d824d41ae98efeeec793c9, type: 3}
     canSkipped: 0
   - audioClip: {fileID: 8300000, guid: a5924cb4aaa31694d8ac6a6a0b494631, type: 3}
     canSkipped: 1

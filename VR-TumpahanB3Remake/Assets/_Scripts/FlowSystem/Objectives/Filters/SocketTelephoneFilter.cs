@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketTelephoneFilter : FlowFilter
 {
+    public bool isAssesmen = false;
     public List<XRDirectInteractor> telephoneInteractor;
     public XRGrabInteractable telephoneInteractable;
     public VoiceLineQueue interupterVoiceLine;
@@ -30,6 +31,12 @@ public class SocketTelephoneFilter : FlowFilter
                 return;
             }
 
+            if (isAssesmen)
+            {
+                isSelected = true;
+                return;
+            }
+
             isSelected = true;
             if (isTelephoneFlow)
             {
@@ -51,6 +58,12 @@ public class SocketTelephoneFilter : FlowFilter
 
             if (!telephoneInteractor.Contains(directInteractor))
             {
+                return;
+            }
+
+            if (isAssesmen)
+            {
+                isSelected = false;
                 return;
             }
 
