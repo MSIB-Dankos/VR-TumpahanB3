@@ -2208,12 +2208,12 @@ MonoBehaviour:
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
-    flowObjective: {fileID: 0}
+    flowObjective: {fileID: 449060429}
     eventBus: {fileID: 449060427}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
   - enable: 1
-    flowObjective: {fileID: 0}
+    flowObjective: {fileID: 657875559}
     eventBus: {fileID: 657875556}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
