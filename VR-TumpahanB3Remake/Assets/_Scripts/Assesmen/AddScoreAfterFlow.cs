@@ -17,6 +17,6 @@ public class AddScoreAfterFlow : MonoBehaviour
 
     private void AddScore()
     {
-        assesmenController.AddScore(addScore);
+        assesmenController.scoreController.AddScore(addScore);
     }
 }
