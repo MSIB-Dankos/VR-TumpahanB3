@@ -16526,7 +16526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59fe722e016ecae438f59fbf21af3ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RequiredTag: ValidateSpillKit
+  m_RequiredTag: Validate
   m_OnEnter:
     m_PersistentCalls:
       m_Calls:
@@ -66351,7 +66351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944910014}
   - component: {fileID: 1944910015}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: ValidateSpillKit
   m_TagString: Validate
   m_Icon: {fileID: 0}
