@@ -70,11 +70,13 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     {
         if (!(interactor is XRBaseInteractor inter))
         {
+            Debug.Log("Not Interactor");
             return false;
         }
 
         if (inter.hasSelection)
         {
+            Debug.Log("Interactor has selection");
             return false;
         }
 
@@ -82,15 +84,18 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
         {
             if (Vector3.Distance(transform.position, inter.transform.position) < 0.1f)
             {
+                Debug.Log("Glove mode true");
                 return true;
             }
         }
 
         if (!gloveMode && allowedInteractor.Contains(inter))
         {
+            Debug.Log("Use mode true");
             return true;
         }
 
+        Debug.Log("skip");
         return false;
 
     }

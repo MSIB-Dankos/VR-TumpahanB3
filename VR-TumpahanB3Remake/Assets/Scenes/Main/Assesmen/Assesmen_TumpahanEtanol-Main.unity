@@ -15645,6 +15645,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6188556726039410674, guid: 685d2772fc6d2a548bb2b4717012b031,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15691,10 +15696,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 453875017}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 685d2772fc6d2a548bb2b4717012b031,
+    - targetCorrespondingSourceObject: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 453875016}
+      addedObject: {fileID: 1332923230}
   m_SourcePrefab: {fileID: 100100000, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!1 &453875013 stripped
 GameObject:
@@ -15723,7 +15728,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders:
   - {fileID: 453875017}
-  - {fileID: 453875016}
+  - {fileID: 1332923230}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -15862,27 +15867,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!65 &453875016
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453875013}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 2, y: 0.25, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &453875017
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17436,7 +17420,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 793171270}
+      - m_Target: {fileID: 946840722}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -17447,6 +17431,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 793171267}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
@@ -17475,7 +17471,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 793171270}
+      - m_Target: {fileID: 946840722}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -17486,6 +17482,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 793171267}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
@@ -27065,13 +27073,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 453875016}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27104,7 +27124,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 453875016}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -28357,6 +28377,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6188556726039410674, guid: 685d2772fc6d2a548bb2b4717012b031,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -28403,10 +28428,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 793171267}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 685d2772fc6d2a548bb2b4717012b031,
+    - targetCorrespondingSourceObject: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 793171270}
+      addedObject: {fileID: 946840722}
   m_SourcePrefab: {fileID: 100100000, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!4 &793171265 stripped
 Transform:
@@ -28456,7 +28481,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders:
   - {fileID: 793171267}
-  - {fileID: 793171270}
+  - {fileID: 946840722}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -28622,27 +28647,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &793171270
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793171266}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 2, y: 0.25, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &793172572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30954,6 +30958,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856435996}
   m_CullTransparentMesh: 1
+--- !u!1 &860515125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
+    type: 3}
+  m_PrefabInstance: {fileID: 793171264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &860676115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33983,6 +33993,28 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 793171264}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &946840722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860515125}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6723510845902370268, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!1 &948412644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 999871026499586435, guid: 5d77a75c98992b840b27e02e065df54f,
@@ -43183,7 +43215,7 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 793171270}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -43195,7 +43227,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 453875016}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -43211,7 +43243,7 @@ MonoBehaviour:
     eventAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 793171270}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -43223,7 +43255,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 453875016}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -46265,6 +46297,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331260858}
   m_CullTransparentMesh: 1
+--- !u!1 &1332923227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4687623255707990259, guid: 685d2772fc6d2a548bb2b4717012b031,
+    type: 3}
+  m_PrefabInstance: {fileID: 453875012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1332923230
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332923227}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6723510845902370268, guid: 685d2772fc6d2a548bb2b4717012b031, type: 3}
 --- !u!1001 &1333167932
 PrefabInstance:
   m_ObjectHideFlags: 0
