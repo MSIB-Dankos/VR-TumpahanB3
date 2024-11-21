@@ -5801,7 +5801,7 @@ GameObject:
   - component: {fileID: 164396168}
   - component: {fileID: 164396167}
   - component: {fileID: 164396166}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightGlove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13899,7 +13899,7 @@ GameObject:
   - component: {fileID: 414631363}
   - component: {fileID: 414631367}
   - component: {fileID: 414631366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftGlove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30392,7 +30392,6 @@ Transform:
   - {fileID: 708366333}
   - {fileID: 967016162}
   - {fileID: 1707289369}
-  - {fileID: 1944910014}
   m_Father: {fileID: 1482591991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &846984477
@@ -48330,28 +48329,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415804849}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1421391028
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340472920827248760}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2761107236370644143, guid: 3543908c38a388d4991c4a599238baad, type: 3}
 --- !u!114 &1421391029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61139,7 +61116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768980875}
   - component: {fileID: 1768980876}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spill Kit Identifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66247,59 +66224,6 @@ MonoBehaviour:
   addScore: 5
   assesmenController: {fileID: 1995137816}
   eventAfterFlow: OnEndFlow
---- !u!1 &1944910013
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1944910014}
-  - component: {fileID: 1944910015}
-  m_Layer: 0
-  m_Name: ValidateSpillKit
-  m_TagString: Validate
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1944910014
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944910013}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.045609, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 846984476}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1944910015
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944910013}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 59.991425, y: 103.03691, z: 59.991425}
-  m_Center: {x: -0.000030517578, y: 51.518456, z: 9.83073e-14}
 --- !u!1 &1945813338
 GameObject:
   m_ObjectHideFlags: 0
@@ -74161,7 +74085,6 @@ GameObject:
   - component: {fileID: 2373736537031185079}
   - component: {fileID: 1421391030}
   - component: {fileID: 1421391029}
-  - component: {fileID: 1421391028}
   m_Layer: 3
   m_Name: Tutup Spill Kit
   m_TagString: Untagged
