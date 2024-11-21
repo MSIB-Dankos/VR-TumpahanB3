@@ -68,28 +68,12 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        // if (gloveMode)
-        // {
-        //     if (interactor is XRBaseInteractor inter)
-        //     {
-        //         if (allowedInteractorWhenGloveMode.Contains(inter))
-        //         {
-        //             return true;
-        //         }
-        //     }
-        // }
-        // else
-        // {
-        //     if (interactor is XRBaseInteractor inter)
-        //     {
-        //         if (allowedInteractor.Contains(inter))
-        //         {
-        //             return true;
-        //         }
-        //     }
-        // }
-        // return false;
         if (!(interactor is XRBaseInteractor inter))
+        {
+            return false;
+        }
+
+        if (inter.hasSelection)
         {
             return false;
         }
