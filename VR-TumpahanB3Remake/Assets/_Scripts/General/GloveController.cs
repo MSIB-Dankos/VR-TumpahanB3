@@ -13,7 +13,9 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     [field: SerializeField] public bool canProcess { get; set; }
     [field: SerializeField] public bool equipMode { get; set; }
 
+    [Header("Assesmen")]
     public bool assesmenMode;
+    public bool isSocketFilled { get; set; }
 
     [Header("Hand Settings")]
 
@@ -47,6 +49,11 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
             gloveMode = false;
             equipMode = false;
+
+            if (isSocketFilled)
+            {
+                return;
+            }
         }
         else
         {
@@ -57,6 +64,7 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
             gloveMode = true;
             equipMode = false;
+
         }
 
         if (assesmenMode)
@@ -68,34 +76,29 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        if (!(interactor is XRBaseInteractor inter))
+        if (!(interactor is XRBaseInteractor _interactor))
         {
-            Debug.Log("Not Interactor");
             return false;
         }
 
-        if (inter.hasSelection)
+        if (_interactor.hasSelection)
         {
-            Debug.Log("Interactor has selection");
             return false;
         }
 
-        if (gloveMode && allowedInteractorWhenGloveMode.Contains(inter))
+        if (gloveMode && allowedInteractorWhenGloveMode.Contains(_interactor))
         {
-            if (Vector3.Distance(transform.position, inter.transform.position) < 0.1f)
+            if (Vector3.Distance(interactable.transform.position, _interactor.transform.position) < 0.05f)
             {
-                Debug.Log("Glove mode true");
                 return true;
             }
         }
 
-        if (!gloveMode && allowedInteractor.Contains(inter))
+        if (!gloveMode && allowedInteractor.Contains(_interactor))
         {
-            Debug.Log("Use mode true");
             return true;
         }
 
-        Debug.Log("skip");
         return false;
 
     }
