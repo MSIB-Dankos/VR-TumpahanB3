@@ -53,11 +53,15 @@ public class AssesmenController : MonoBehaviour
         {
             if (objectives[objectiveIndex + 1].isComplete)
             {
+                objective.isComplete = true;
                 return;
             }
         }
 
-        objective.isComplete = true;
-        scoreController.AddScore(objective.score);
+        if (!objective.isComplete)
+        {
+            objective.isComplete = true;
+            scoreController.AddScore(objective.score);
+        }
     }
 }

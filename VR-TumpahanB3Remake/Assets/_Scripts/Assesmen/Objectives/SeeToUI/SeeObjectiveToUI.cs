@@ -8,6 +8,7 @@ public class SeeObjectiveToUI : MonoBehaviour
     public RaycastObject raycastObject;
 
     [Header("UI")]
+    public CanvasGroup canvasGroup;
     public Animator canvasAnimator;
 
     private void Awake()
@@ -33,5 +34,6 @@ public class SeeObjectiveToUI : MonoBehaviour
         }
 
         canvasAnimator.SetTrigger("FadeIn");
+        canvasGroup.blocksRaycasts = true;
     }
 }

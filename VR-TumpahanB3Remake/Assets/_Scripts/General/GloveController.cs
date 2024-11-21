@@ -13,6 +13,8 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     [field: SerializeField] public bool canProcess { get; set; }
     [field: SerializeField] public bool equipMode { get; set; }
 
+    public bool assesmenMode;
+
     [Header("Hand Settings")]
 
     public FollowTransform followTransform;
@@ -56,31 +58,57 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
             gloveMode = true;
             equipMode = false;
         }
+
+        if (assesmenMode)
+        {
+            SetEquipMode();
+        }
+
     }
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        if (gloveMode)
+        // if (gloveMode)
+        // {
+        //     if (interactor is XRBaseInteractor inter)
+        //     {
+        //         if (allowedInteractorWhenGloveMode.Contains(inter))
+        //         {
+        //             return true;
+        //         }
+        //     }
+        // }
+        // else
+        // {
+        //     if (interactor is XRBaseInteractor inter)
+        //     {
+        //         if (allowedInteractor.Contains(inter))
+        //         {
+        //             return true;
+        //         }
+        //     }
+        // }
+        // return false;
+        if (!(interactor is XRBaseInteractor inter))
         {
-            if (interactor is XRBaseInteractor inter)
+            return false;
+        }
+
+        if (gloveMode && allowedInteractorWhenGloveMode.Contains(inter))
+        {
+            if (Vector3.Distance(transform.position, inter.transform.position) < 0.1f)
             {
-                if (allowedInteractorWhenGloveMode.Contains(inter))
-                {
-                    return true;
-                }
+                return true;
             }
         }
-        else
+
+        if (!gloveMode && allowedInteractor.Contains(inter))
         {
-            if (interactor is XRBaseInteractor inter)
-            {
-                if (allowedInteractor.Contains(inter))
-                {
-                    return true;
-                }
-            }
+            return true;
         }
+
         return false;
+
     }
 
     public void SetEquipMode()
