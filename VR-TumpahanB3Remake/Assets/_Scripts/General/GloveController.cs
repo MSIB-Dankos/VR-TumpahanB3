@@ -13,10 +13,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     [field: SerializeField] public bool canProcess { get; set; }
     [field: SerializeField] public bool equipMode { get; set; }
 
-    [Header("Assesmen")]
-    public bool assesmenMode;
-    public bool isSocketFilled { get; set; }
-
     [Header("Hand Settings")]
 
     public FollowTransform followTransform;
@@ -49,11 +45,6 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
             gloveMode = false;
             equipMode = false;
-
-            if (isSocketFilled)
-            {
-                return;
-            }
         }
         else
         {
@@ -64,43 +55,32 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
             gloveMode = true;
             equipMode = false;
-
         }
-
-        if (assesmenMode)
-        {
-            SetEquipMode();
-        }
-
     }
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        if (!(interactor is XRBaseInteractor _interactor))
+        if (gloveMode)
         {
-            return false;
-        }
-
-        if (_interactor.hasSelection)
-        {
-            return false;
-        }
-
-        if (gloveMode && allowedInteractorWhenGloveMode.Contains(_interactor))
-        {
-            if (Vector3.Distance(interactable.transform.position, _interactor.transform.position) < 0.05f)
+            if (interactor is XRBaseInteractor inter)
             {
-                return true;
+                if (allowedInteractorWhenGloveMode.Contains(inter))
+                {
+                    return true;
+                }
             }
         }
-
-        if (!gloveMode && allowedInteractor.Contains(_interactor))
+        else
         {
-            return true;
+            if (interactor is XRBaseInteractor inter)
+            {
+                if (allowedInteractor.Contains(inter))
+                {
+                    return true;
+                }
+            }
         }
-
         return false;
-
     }
 
     public void SetEquipMode()

@@ -4421,8 +4421,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 414631363}
         m_TargetAssemblyTypeName: GloveController, Assembly-CSharp
-        m_MethodName: set_isSocketFilled
-        m_Mode: 6
+        m_MethodName: SetEquipMode
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4433,8 +4433,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 164396168}
         m_TargetAssemblyTypeName: GloveController, Assembly-CSharp
-        m_MethodName: set_isSocketFilled
-        m_Mode: 6
+        m_MethodName: SetEquipMode
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5851,7 +5851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followType: 1
-  target: {fileID: 957420564}
+  target: {fileID: 757914541}
   positionAxis: 7
   rotationAxis: 7
   scaleAxis: 7
@@ -5929,8 +5929,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters: []
-  m_StartingSelectFilters:
-  - {fileID: 164396168}
+  m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
@@ -6028,7 +6027,6 @@ MonoBehaviour:
   - {fileID: 733155217}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 1
-  assesmenMode: 1
   followTransform: {fileID: 164396166}
   handRenderer: {fileID: 1940146950}
   gloveMaterial: {fileID: 2100000, guid: d930b3df93a53784abe68ec886839d31, type: 2}
@@ -14017,7 +14015,6 @@ MonoBehaviour:
   - {fileID: 1281559140}
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 1
-  assesmenMode: 1
   followTransform: {fileID: 414631366}
   handRenderer: {fileID: 1940146949}
   gloveMaterial: {fileID: 2100000, guid: d930b3df93a53784abe68ec886839d31, type: 2}
@@ -14163,8 +14160,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters: []
-  m_StartingSelectFilters:
-  - {fileID: 414631363}
+  m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
@@ -27795,6 +27791,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8505032083176376874, guid: 24c728c68968f6447b856666f27564a5,
     type: 3}
   m_PrefabInstance: {fileID: 752781165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &757914541 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8577411298789216775, guid: be226bd024e366247b8a91db8d0589cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1940146946}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &760296915
 PrefabInstance:
