@@ -17,6 +17,8 @@ public class FillSocketFeedback : FeedbackCondition
 
     public List<SocketItem> socketItems = new List<SocketItem>();
 
+    private bool isComplete = false;
+
     private void Awake()
     {
         foreach (SocketItem socketItem in socketItems)
@@ -59,13 +61,13 @@ public class FillSocketFeedback : FeedbackCondition
 
         foreach (SocketItem socketItem in socketItems)
         {
-            if (socketItem.filled)
+            if (socketItem.filled && socketItem.itemName != "")
             {
-                filledSocket += string.Format($"{0}, ", socketItem.itemName);
+                filledSocket += string.Format("{0}, ", socketItem.itemName);
             }
-            else
+            else if (!socketItem.filled && socketItem.itemName != "")
             {
-                unfilledSocket += string.Format($"{0}, ", socketItem.itemName);
+                unfilledSocket += string.Format("{0}, ", socketItem.itemName);
             }
         }
 
@@ -75,22 +77,26 @@ public class FillSocketFeedback : FeedbackCondition
             mergeBase = RemoveWordWithDollarSign(mergeBase);
             unfilledSocket.Remove(unfilledSocket.Length - 2);
         }
-        if (unfilledSocket == "")
+        else if (unfilledSocket == "")
         {
             mergeBase = RemoveWordWithTagSign(mergeBase);
             filledSocket.Remove(filledSocket.Length - 2);
         }
         else
         {
-            mergeBase.Replace("$", "");
-            mergeBase.Replace("#", "");
-
             filledSocket.Remove(filledSocket.Length - 2);
             unfilledSocket.Remove(unfilledSocket.Length - 2);
         }
 
-        mergeBase.Replace("{filledSocket}", filledSocket);
-        mergeBase.Replace("{unfilledSocket}", unfilledSocket);
+        mergeBase = mergeBase.Replace("$", "");
+        mergeBase = mergeBase.Replace("#", "");
+
+        Debug.Log($"this: {name}\nfilledSocket: {filledSocket}, unfilledSocket: {unfilledSocket}");
+
+        mergeBase = mergeBase.Replace("{filledSocket}", filledSocket);
+        mergeBase = mergeBase.Replace("{unfilledSocket}", unfilledSocket);
+
+        Debug.Log($"this: {name}\nreturn: {mergeBase}");
 
         return mergeBase;
     }
