@@ -17,8 +17,6 @@ public class FillSocketFeedback : FeedbackCondition
 
     public List<SocketItem> socketItems = new List<SocketItem>();
 
-    private bool isComplete = false;
-
     private void Awake()
     {
         foreach (SocketItem socketItem in socketItems)
@@ -91,12 +89,8 @@ public class FillSocketFeedback : FeedbackCondition
         mergeBase = mergeBase.Replace("$", "");
         mergeBase = mergeBase.Replace("#", "");
 
-        Debug.Log($"this: {name}\nfilledSocket: {filledSocket}, unfilledSocket: {unfilledSocket}");
-
         mergeBase = mergeBase.Replace("{filledSocket}", filledSocket);
         mergeBase = mergeBase.Replace("{unfilledSocket}", unfilledSocket);
-
-        Debug.Log($"this: {name}\nreturn: {mergeBase}");
 
         return mergeBase;
     }
