@@ -832,6 +832,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 19610290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &20451904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20451905}
+  - component: {fileID: 20451906}
+  m_Layer: 0
+  m_Name: Socket membuang plastik B3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20451905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20451904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &20451906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20451904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang plastik B3 ke tempat sampah B3 '
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang plastik B3 ke tempat sampah B3 '
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menelpon tim tanggap darurat
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu #tidak {unfilledSocket} $walaupun# sudah {filledSocket} $
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: 'Membuang plastik B3 ke tempat sampah B3 '
+  socketItems:
+  - socket: {fileID: 0}
+    itemName: 
+    filled: 0
 --- !u!1001 &22706052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6728,7 +6807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assesmenController: {fileID: 1995137816}
-  selectedAssesmen: 'Membuang kain lap ke plastik B3 '
+  selectedAssesmen: 'Membuang sisa kain bebas serat dan sarung tangan ke plastik
+    B3 '
 --- !u!1001 &171793534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9167,6 +9247,106 @@ Transform:
   - {fileID: 977923749}
   m_Father: {fileID: 306836575}
   m_LocalEulerAnglesHint: {x: 126.87601, y: -180, z: 0}
+--- !u!1 &243166684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243166685}
+  - component: {fileID: 243166686}
+  m_Layer: 0
+  m_Name: Socket buang kain bebas serat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243166685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243166684}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243166686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243166684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang Kain Bebas Serat ke plastik B3
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang Kain Bebas Serat ke plastik B3
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Mengelap sisa tumpahan
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu belum membuang semua kain bebas serat
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Membuang Kain Bebas Serat ke plastik B3
+  socketItems:
+  - socket: {fileID: 343628367}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 545164567}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 904929053}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 887378185}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1429929719}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1562244984}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1170488731}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1719389474}
+    itemName: 
+    filled: 0
 --- !u!1001 &250611936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22769,6 +22949,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 630012964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &630848050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630848051}
+  m_Layer: 0
+  m_Name: Socket mengelap sisa tumpahan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630848051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630848050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631308862
 GameObject:
   m_ObjectHideFlags: 0
@@ -25517,6 +25728,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 696448264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &699424658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699424659}
+  m_Layer: 0
+  m_Name: Button selanjutnya
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699424659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699424658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &699819606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30496,7 +30738,7 @@ GameObject:
   - component: {fileID: 828416744}
   - component: {fileID: 828416745}
   m_Layer: 0
-  m_Name: Masang APD
+  m_Name: Socket APD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32364,8 +32606,96 @@ Transform:
   - {fileID: 1352094458}
   - {fileID: 1839514368}
   - {fileID: 828416744}
+  - {fileID: 1774222573}
+  - {fileID: 871026450}
+  - {fileID: 1861085861}
+  - {fileID: 1335219266}
+  - {fileID: 243166685}
+  - {fileID: 630848051}
+  - {fileID: 1357784826}
+  - {fileID: 20451905}
+  - {fileID: 699424659}
   m_Father: {fileID: 1995137817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871026449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871026450}
+  - component: {fileID: 871026451}
+  m_Layer: 0
+  m_Name: Socket Jerry can
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871026450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871026449}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871026451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871026449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menempatkan plastik dan membuang jerrycan
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menempatkan plastik dan membuang jerrycan
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Memasang kain bebas serat
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu #tidak {unfilledSocket} $walaupun# sudah {filledSocket} $
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Menempatkan plastik dan membuang jerrycan
+  socketItems:
+  - socket: {fileID: 804226010}
+    itemName: membuang jerry can
+    filled: 0
 --- !u!1001 &871939528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47942,6 +48272,88 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1335219265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335219266}
+  - component: {fileID: 1335219267}
+  m_Layer: 0
+  m_Name: Socket buang adsorbent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335219266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335219265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335219267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335219265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang adsorbent ke plastik B3
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang adsorbent ke plastik B3
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang Kain Bebas Serat ke plastik B3
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu #tidak {unfilledSocket} $walaupun# sudah {filledSocket} $
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Membuang adsorbent ke plastik B3
+  socketItems:
+  - socket: {fileID: 827410026}
+    itemName: membuang adsorbent kiri
+    filled: 0
+  - socket: {fileID: 929412853}
+    itemName: membuang adsorbent kanan
+    filled: 0
 --- !u!1001 &1336451320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48645,6 +49057,91 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1357504016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1357784825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357784826}
+  - component: {fileID: 1357784827}
+  m_Layer: 0
+  m_Name: Socket membuang kain dan sarung tangan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357784826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357784825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357784827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357784825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang kain lap ke plastik B3 '
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang kain lap ke plastik B3 '
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang plastik B3 ke tempat sampah B3 '
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu #tidak {unfilledSocket} $walaupun# sudah {filledSocket} $
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: 'Membuang sisa kain bebas serat dan sarung tangan ke plastik B3 '
+  socketItems:
+  - socket: {fileID: 124452740}
+    itemName: membuang sisa kain bebas serat
+    filled: 0
+  - socket: {fileID: 2068581596}
+    itemName: membuang sarung tangan kiri
+    filled: 0
+  - socket: {fileID: 584949202}
+    itemName: membuang sarung tangan kanan
+    filled: 0
 --- !u!1 &1361900981
 GameObject:
   m_ObjectHideFlags: 0
@@ -57139,7 +57636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assesmenController: {fileID: 1995137816}
-  selectedAssesmen: Selanjutnya tim tanggap darurat
+  selectedAssesmen: Menelpon tim tanggap darurat
 --- !u!1 &1616413251
 GameObject:
   m_ObjectHideFlags: 0
@@ -63557,6 +64054,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1771985527}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1774222572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774222573}
+  - component: {fileID: 1774222574}
+  m_Layer: 0
+  m_Name: Socket Adsorbent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1774222573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774222572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774222574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774222572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Memasang adsorbent
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Memasang adsorbent
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menempatkan plastik dan membuang jerrycan
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu #tidak {unfilledSocket} $walaupun# sudah {filledSocket} $
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Memasang adsorbent
+  socketItems:
+  - socket: {fileID: 515416063}
+    itemName: memasang adsorbent kiri
+    filled: 0
+  - socket: {fileID: 745775171}
+    itemName: memasang adsorbent kanan
+    filled: 0
 --- !u!1001 &1775700933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66261,6 +66840,106 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1861085860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861085861}
+  - component: {fileID: 1861085862}
+  m_Layer: 0
+  m_Name: Socket kain bebas serat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1861085861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861085860}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 870103010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861085862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861085860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aae81ac79e0ae47960cb5849348262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Memasang kain bebas serat
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Memasang kain bebas serat
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Membuang adsorbent ke plastik B3
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu belum menutupi seluruh tumpahan dengan kain bebas serat
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Memasang kain bebas serat
+  socketItems:
+  - socket: {fileID: 1107525051}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 598808721}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 684840690}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1691663632}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 1673548403}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 891656420}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 381034423}
+    itemName: 
+    filled: 0
+  - socket: {fileID: 355961356}
+    itemName: 
+    filled: 0
 --- !u!1001 &1884828511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70393,7 +71072,7 @@ MonoBehaviour:
     onComplete:
       m_PersistentCalls:
         m_Calls: []
-  - objectiveName: 'Membuang kain lap ke plastik B3 '
+  - objectiveName: 'Membuang sisa kain bebas serat dan sarung tangan ke plastik B3 '
     isComplete: 0
     score: 5
     onComplete:
@@ -70405,7 +71084,7 @@ MonoBehaviour:
     onComplete:
       m_PersistentCalls:
         m_Calls: []
-  - objectiveName: Selanjutnya tim tanggap darurat
+  - objectiveName: Menelpon tim tanggap darurat
     isComplete: 0
     score: 5
     onComplete:
@@ -70416,6 +71095,8 @@ MonoBehaviour:
   - {fileID: 1352094459}
   - {fileID: 1839514369}
   - {fileID: 828416745}
+  - {fileID: 1774222574}
+  - {fileID: 871026451}
   listTextPrefab: {fileID: 906664608698749009, guid: 22988c7e364480b49a4e0047ea7b669c,
     type: 3}
   listTextContainer: {fileID: 207774472}
