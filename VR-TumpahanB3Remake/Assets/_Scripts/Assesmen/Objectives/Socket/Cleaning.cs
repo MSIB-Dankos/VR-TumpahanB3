@@ -26,8 +26,9 @@ public class Cleaning : MonoBehaviour
                     continue;
                 }
             }
-            
+
             onFluidClean?.Invoke();
+            yield break;
         }
     }
 }
