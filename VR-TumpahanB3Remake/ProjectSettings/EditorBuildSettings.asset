@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Pelatihan/Pelatihan_TumpahanEtanol-Main.unity
     guid: 94479e70a528dbb43b322b17e68dc72a
+  - enabled: 1
+    path: Assets/Scenes/Main/Assesmen/Assesmen_TumpahanEtanol-Main.unity
+    guid: 3b9fe08cec6ef3e448544bf52913e6bf
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 54449050955d50540b09d147cbf9c008,
       type: 2}
