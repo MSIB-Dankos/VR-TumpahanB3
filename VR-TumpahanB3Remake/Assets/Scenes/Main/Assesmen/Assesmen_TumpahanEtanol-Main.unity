@@ -22971,6 +22971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 630848051}
+  - component: {fileID: 630848052}
   m_Layer: 0
   m_Name: Socket mengelap sisa tumpahan
   m_TagString: Untagged
@@ -22993,6 +22994,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 870103010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &630848052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630848050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e13d2c2444309c4eb8311118a3a7257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Mengelap sisa tumpahan
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Mengelap sisa tumpahan
+    - wordMode: 1
+      word: '" dilakukan sebelum step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang sisa kain bebas serat dan sarung tangan ke plastik
+        B3 '
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu tidak mengelap sisa tumpahan
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Mengelap sisa tumpahan
 --- !u!1 &631308862
 GameObject:
   m_ObjectHideFlags: 0
@@ -25750,6 +25795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 699424659}
+  - component: {fileID: 699424660}
   m_Layer: 0
   m_Name: Button selanjutnya
   m_TagString: Untagged
@@ -25772,6 +25818,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 870103010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699424660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699424658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e13d2c2444309c4eb8311118a3a7257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assesmenController: {fileID: 1995137816}
+  feedbackWords:
+  - words:
+    - wordMode: 1
+      word: Kamu melakukan step "
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menelpon tim tanggap darurat
+    - wordMode: 1
+      word: '" namun tidak sesuai urutan, step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: Menelpon tim tanggap darurat
+    - wordMode: 1
+      word: '" dilakukan sesudah step "'
+      wordReference: 
+    - wordMode: 0
+      word: 
+      wordReference: 'Membuang plastik B3 ke tempat sampah B3 '
+    - wordMode: 1
+      word: '"'
+      wordReference: 
+  - words:
+    - wordMode: 1
+      word: Kamu tidak menelpon tim tanggap darurat
+      wordReference: 
+  currentFeedbackWord:
+    words: []
+  objectiveName: Menelpon tim tanggap darurat
 --- !u!1001 &699819606
 PrefabInstance:
   m_ObjectHideFlags: 0

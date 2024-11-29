@@ -40,7 +40,6 @@ public class AssesmenController : MonoBehaviour
 
     public ScoreController scoreController;
     [ListDrawerSettings(NumberOfItemsPerPage = 5)] public List<Objective> objectives = new List<Objective>();
-
     [Header("Feedbacks")]
     public List<FeedbackCondition> feedbackConditions = new List<FeedbackCondition>();
     public TMP_Text listTextPrefab;
