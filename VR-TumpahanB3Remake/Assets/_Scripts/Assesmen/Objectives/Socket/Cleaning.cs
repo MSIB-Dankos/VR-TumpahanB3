@@ -27,7 +27,7 @@ public class Cleaning : MonoBehaviour
                 }
             }
             
-            yield return updateTime;
+            onFluidClean?.Invoke();
         }
     }
 }
