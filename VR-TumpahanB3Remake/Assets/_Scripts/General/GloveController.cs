@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
@@ -9,7 +10,9 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 {
     [Header("Filter")]
     public List<XRBaseInteractor> allowedInteractor;
-    public List<XRBaseInteractor> allowedInteractorWhenGloveMode;
+    public Transform oppositeHand;
+    public InputActionReference releaseGloveInput;
+    public float distanceReleaseGlove = 0.05f;
     [field: SerializeField] public bool canProcess { get; set; }
     [field: SerializeField] public bool equipMode { get; set; }
 
@@ -27,6 +30,30 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
     {
         interactable = GetComponent<XRGrabInteractable>();
         interactable.selectEntered.AddListener(OnSelect);
+
+        releaseGloveInput.action.started += OnOppisiteHandSelect;
+    }
+
+    private void OnOppisiteHandSelect(InputAction.CallbackContext ctx)
+    {
+        if (!equipMode)
+        {
+            return;
+        }
+        
+        if (Vector3.Distance(oppositeHand.position, transform.position) < distanceReleaseGlove)
+        {
+            if (gloveMode)
+            {
+                followTransform.enabled = false;
+                handRenderer.material = originalMaterial;
+                gloveRenderer.enabled = true;
+                boxCollider.enabled = true;
+
+                gloveMode = false;
+                equipMode = false;
+            }
+        }
     }
 
     private void OnSelect(SelectEnterEventArgs args)
@@ -36,17 +63,9 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
             return;
         }
 
-        if (gloveMode)
-        {
-            followTransform.enabled = false;
-            handRenderer.material = originalMaterial;
-            gloveRenderer.enabled = true;
-            boxCollider.enabled = true;
+        IXRSelectInteractor interactor = args.interactorObject;
 
-            gloveMode = false;
-            equipMode = false;
-        }
-        else
+        if (!gloveMode)
         {
             followTransform.enabled = true;
             handRenderer.material = gloveMaterial;
@@ -60,17 +79,7 @@ public class GloveController : MonoBehaviour, IXRSelectFilter
 
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
-        if (gloveMode)
-        {
-            if (interactor is XRBaseInteractor inter)
-            {
-                if (allowedInteractorWhenGloveMode.Contains(inter))
-                {
-                    return true;
-                }
-            }
-        }
-        else
+        if (!gloveMode)
         {
             if (interactor is XRBaseInteractor inter)
             {

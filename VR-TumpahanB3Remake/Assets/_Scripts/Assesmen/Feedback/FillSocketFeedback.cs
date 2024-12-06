@@ -70,17 +70,17 @@ public class FillSocketFeedback : FeedbackCondition
         }
 
         string mergeBase = base.GetFeebackWordString();
-        if (filledSocket == "")
+        if (filledSocket == "" && unfilledSocket != "")
         {
             mergeBase = RemoveWordWithDollarSign(mergeBase);
             unfilledSocket.Remove(unfilledSocket.Length - 2);
         }
-        else if (unfilledSocket == "")
+        else if (unfilledSocket == "" && filledSocket != "")
         {
             mergeBase = RemoveWordWithTagSign(mergeBase);
             filledSocket.Remove(filledSocket.Length - 2);
         }
-        else
+        else if (unfilledSocket != "" && filledSocket != "")
         {
             filledSocket.Remove(filledSocket.Length - 2);
             unfilledSocket.Remove(unfilledSocket.Length - 2);
