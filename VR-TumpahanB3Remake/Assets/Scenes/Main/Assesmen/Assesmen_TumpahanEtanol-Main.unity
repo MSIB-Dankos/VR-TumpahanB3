@@ -28854,7 +28854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitAfter: 15
   activatedObejcts:
-  - {fileID: 404968492}
+  - {fileID: 1457712954}
   eventBeforeFlow: ActiveButton
 --- !u!114 &771030257
 MonoBehaviour:
@@ -52291,7 +52291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1457712955
 RectTransform:
   m_ObjectHideFlags: 0
