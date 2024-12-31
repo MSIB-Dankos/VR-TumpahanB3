@@ -72,5 +72,4 @@ public class BookOpen : MonoBehaviour
 
         onCloseBook?.Invoke();
     }
-
 }

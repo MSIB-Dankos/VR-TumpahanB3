@@ -13132,6 +13132,7 @@ GameObject:
   - component: {fileID: 374480337}
   - component: {fileID: 374480339}
   - component: {fileID: 374480338}
+  - component: {fileID: 374480342}
   m_Layer: 5
   m_Name: UI-Pertanyaan APD yang dipakai
   m_TagString: Untagged
@@ -13274,6 +13275,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &374480342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374480334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0cceef220cb5046b62a777283f5f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiAnimator: {fileID: 374480337}
+  uiCanvasGroup: {fileID: 374480336}
 --- !u!1 &381034418
 GameObject:
   m_ObjectHideFlags: 0
@@ -31397,6 +31412,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7130933916817260433, guid: 00f2ce65178270a459700e0c08c55a4f,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130933916817260433, guid: 00f2ce65178270a459700e0c08c55a4f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130933916817260433, guid: 00f2ce65178270a459700e0c08c55a4f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8600001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130933916817260433, guid: 00f2ce65178270a459700e0c08c55a4f,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.178
       objectReference: {fileID: 0}
@@ -31444,6 +31474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130933916817260433, guid: 00f2ce65178270a459700e0c08c55a4f,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7619521233714750763, guid: 00f2ce65178270a459700e0c08c55a4f,
         type: 3}
@@ -73364,6 +73399,7 @@ MonoBehaviour:
   - {fileID: 890444128}
   - {fileID: 1352094459}
   - {fileID: 1839514369}
+  - {fileID: 854691218}
   - {fileID: 828416745}
   - {fileID: 1774222574}
   - {fileID: 871026451}
@@ -79103,7 +79139,7 @@ PrefabInstance:
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
@@ -79118,7 +79154,7 @@ PrefabInstance:
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
@@ -79169,7 +79205,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 374480337}
+      objectReference: {fileID: 374480342}
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -79268,7 +79304,7 @@ PrefabInstance:
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetTrigger
+      value: OpenUI
       objectReference: {fileID: 0}
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
@@ -79318,7 +79354,7 @@ PrefabInstance:
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
       propertyPath: onOpenBook.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: UIAPDHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7416828163060681430, guid: fed20831aebf8924f910656a591fa6ed,
         type: 3}
