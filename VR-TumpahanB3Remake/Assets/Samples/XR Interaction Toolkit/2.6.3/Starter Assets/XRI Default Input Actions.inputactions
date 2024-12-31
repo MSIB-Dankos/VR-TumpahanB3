@@ -96,7 +96,7 @@
                     "path": "<HandheldARInputDevice>/devicePosition",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -118,7 +118,7 @@
                     "path": "<HandheldARInputDevice>/deviceRotation",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": false

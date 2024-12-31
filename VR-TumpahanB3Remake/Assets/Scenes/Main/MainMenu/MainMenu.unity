@@ -4646,9 +4646,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3118869579382303278, guid: be226bd024e366247b8a91db8d0589cb,
+        type: 3}
+      propertyPath: m_CameraYOffset
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7884874084197050641, guid: be226bd024e366247b8a91db8d0589cb,
         type: 3}
-      propertyPath: m_UpdateType
+      propertyPath: m_IgnoreTrackingState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9181689493330664950, guid: be226bd024e366247b8a91db8d0589cb,

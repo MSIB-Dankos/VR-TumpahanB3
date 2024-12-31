@@ -18,17 +18,25 @@ public class Cleaning : MonoBehaviour
         WaitForSeconds updateTime = new WaitForSeconds(0.1f);
         while (true)
         {
+            bool allClean = true;
+
             foreach (CleanFluid cleanFluid in cleanFluids)
             {
                 if (!cleanFluid.IsClean())
                 {
-                    yield return updateTime;
-                    continue;
+                    allClean = false; // Not all are clean, set the flag to false
+                    break; // Exit the loop as one fluid is not clean
                 }
             }
 
-            onFluidClean?.Invoke();
-            yield break;
+            if (allClean)
+            {
+                onFluidClean?.Invoke(); // Invoke the event only when all are clean
+                yield break; // Exit the coroutine
+            }
+
+            yield return updateTime; // Wait before re-checking
         }
     }
+
 }

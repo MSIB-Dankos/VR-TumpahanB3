@@ -6421,8 +6421,9 @@ MonoBehaviour:
   allowedInteractor:
   - {fileID: 1281559140}
   - {fileID: 584949202}
-  allowedInteractorWhenGloveMode:
-  - {fileID: 733155217}
+  oppositeHand: {fileID: 0}
+  releaseGloveInput: {fileID: 0}
+  distanceReleaseGlove: 0.05
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 164396166}
@@ -15877,8 +15878,9 @@ MonoBehaviour:
   allowedInteractor:
   - {fileID: 733155217}
   - {fileID: 2068581596}
-  allowedInteractorWhenGloveMode:
-  - {fileID: 1281559140}
+  oppositeHand: {fileID: 0}
+  releaseGloveInput: {fileID: 0}
+  distanceReleaseGlove: 0.05
   <canProcess>k__BackingField: 1
   <equipMode>k__BackingField: 0
   followTransform: {fileID: 414631366}
@@ -69748,7 +69750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7884874084197050641, guid: be226bd024e366247b8a91db8d0589cb,
         type: 3}
-      propertyPath: m_UpdateType
+      propertyPath: m_IgnoreTrackingState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7884874084197050648, guid: be226bd024e366247b8a91db8d0589cb,

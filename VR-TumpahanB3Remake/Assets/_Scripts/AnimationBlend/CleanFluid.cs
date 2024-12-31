@@ -23,6 +23,7 @@ public class CleanFluid : MonoBehaviour
     {
         if (other.gameObject == cleanerObject)
         {
+            Debug.Log("is Clean");
             Color currentColor = meshRendererController.meshRenderers[0].material.color;
             meshRendererController.SetColors(new Color(
                 currentColor.r - darkerAmount,

@@ -4413,6 +4413,7 @@ MonoBehaviour:
   socketInteractorAllowedObjects:
   - {fileID: 819752029}
   - {fileID: 194039557}
+  filters: []
 --- !u!114 &653938256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5883,7 +5884,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.083333336
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 4c2d732e3b22fe746ab29db9d10a2361, type: 2}
   m_BuildHeightMesh: 0
@@ -10787,7 +10788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7884874084197050641, guid: be226bd024e366247b8a91db8d0589cb,
         type: 3}
-      propertyPath: m_UpdateType
+      propertyPath: m_IgnoreTrackingState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9181689493330664950, guid: be226bd024e366247b8a91db8d0589cb,
@@ -11171,6 +11172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socketInteractorAllowedObjects:
   - {fileID: 933352599}
+  filters: []
 --- !u!114 &1906846536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11447,39 +11449,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowList:
-  - flowObjective: {fileID: 1019881075}
+  - enable: 1
+    flowObjective: {fileID: 1019881075}
     eventBus: {fileID: 1019881076}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 626776306}
+  - enable: 1
+    flowObjective: {fileID: 626776306}
     eventBus: {fileID: 626776307}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 24745891}
+  - enable: 1
+    flowObjective: {fileID: 24745891}
     eventBus: {fileID: 24745892}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 1894819080}
+  - enable: 1
+    flowObjective: {fileID: 1894819080}
     eventBus: {fileID: 1894819081}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 263955129}
+  - enable: 1
+    flowObjective: {fileID: 263955129}
     eventBus: {fileID: 263955130}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 653938255}
+  - enable: 1
+    flowObjective: {fileID: 653938255}
     eventBus: {fileID: 653938256}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 377811880}
+  - enable: 1
+    flowObjective: {fileID: 377811880}
     eventBus: {fileID: 377811879}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 1579100233}
+  - enable: 1
+    flowObjective: {fileID: 1579100233}
     eventBus: {fileID: 1579100234}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
-  - flowObjective: {fileID: 1906846535}
+  - enable: 1
+    flowObjective: {fileID: 1906846535}
     eventBus: {fileID: 1906846536}
     eventBeforeFlow: OnStartFlow
     eventAfterFlow: OnEndFlow
