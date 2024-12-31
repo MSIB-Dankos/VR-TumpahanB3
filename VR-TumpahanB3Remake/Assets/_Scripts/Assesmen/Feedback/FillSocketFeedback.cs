@@ -16,13 +16,20 @@ public class FillSocketFeedback : FeedbackCondition
     }
 
     public List<SocketItem> socketItems = new List<SocketItem>();
+    public bool ignoreSocketExit = false;
 
     private void Awake()
     {
         foreach (SocketItem socketItem in socketItems)
         {
             socketItem.socket.selectEntered.AddListener(args => socketItem.filled = true);
-            socketItem.socket.selectExited.AddListener(args => socketItem.filled = false);
+            socketItem.socket.selectExited.AddListener(args => {
+                if (ignoreSocketExit)
+                {
+                    return;
+                }
+                socketItem.filled = false;
+            });
         }
 
         assesmenController.objectives.Find(x => x.objectiveName == objectiveName).onComplete.AddListener(CheckOnComplete);

@@ -107,7 +107,10 @@ public class FillKainBebasSerat : MonoBehaviour
         }
 
         isDone = checkAbsorbDone;
-        onComplete?.Invoke();
+        if (isDone)
+        {
+            onComplete?.Invoke();
+        }
     }
 
     public bool IsAllComplete()
